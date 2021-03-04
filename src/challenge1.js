@@ -1,8 +1,9 @@
 // Using the function keyword declare a function called `greet`
 // that returns a String "Hi, Ed!"
-function greet ()
+function greet (name)
 {
-    console.log('Hi, Ed!')
+    console.log('Hi, '+ name + '!')
 }
 
-greet()
+greet('Saffa')
+
