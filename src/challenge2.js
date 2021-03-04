@@ -1,4 +1,7 @@
-function greet(){
-return `Hi, ${process.argv[2]}`}
 
-console.log(greet())
+
+function greet(name){
+return `Hi, ${name}`}
+
+console.log(greet(process.argv[2]))
+console.log(greet(process.argv[3]))
