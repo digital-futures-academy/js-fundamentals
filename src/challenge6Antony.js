@@ -98,30 +98,35 @@ let characters = {
     '0': 97
 }
 
-function encryption(string) {
+const fs = require('fs');
+
+function readInput(sourceFile) {
+    var txtFile = fs.readFileSync(sourceFile).toString().split('\r\n');     //  Read file, turn to string, split that string into array by \r\n
+    let textArray = txtFile.map(valuePair => {                              //  each element in array split into own 2 part array
+        return valuePair.split(', ');
+    })
+    for(let i = 0; i < textArray.length; i++) {                             //  Changing string numbers into Integers
+        let number = parseInt(textArray[i][1]);
+        textArray[i][1] = number;
+    }
+    let textObject = Object.fromEntries(textArray);                         //  Turn value pair array into an Object
+    return textObject;
+}
+
+function encryption(string, sourceFile) {
     let output = '';
+    let cheatSheet = readInput(sourceFile);
     for(let i = 0; i < string.length; i++) {
-        let charNum = characters[string[i]];
+        let charNum = cheatSheet[string[i]];
         output += charNum.toString();
     }
     return output;
 }
 
-let test = encryption('hello');
+let test = encryption('hello', 'character_set.txt');
 console.log(test);
 
 
-// Need more reseach into node.js fs
-// What are the parameters (err, data)?
+// readInput('character_set.txt');
+// console.log(characters);
 
-
-// This can log the text file, how to set to variable?
-
-// const fs = require('fs');
-// let stringInput;
-
-// fs.readFile('character_set.txt', (err, data) => {
-//     if (err) throw err;
-
-//     console.log(data.toString());
-// })
