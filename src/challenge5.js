@@ -1,9 +1,20 @@
 
-const uncap = 'asia';
-const cap = uncap.charAt(0).toUpperCase() + uncap.slice(1)
+class Student{
+constructor(student){
+
+this.student = student
+
+}
+capitalise(){
+
+    return this.student.charAt(0).toUpperCase() + this.student.slice(1)
+}
+
+}
 
 
-console.log(cap)
+let cap = new Student('asia');
+console.log(cap.capitalise())
 
 
     
