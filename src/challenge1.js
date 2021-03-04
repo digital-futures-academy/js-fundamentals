@@ -2,10 +2,10 @@
 // that returns a String "Hi, Ed!"
 
 //function 
-function greet(name) {
+function greet() {
 
 //return the string
-    return `Hi, ${name}!`;
+    return `Hi, Ed!`;
 }
 // console log
 console.log(greet());
