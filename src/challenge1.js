@@ -5,5 +5,4 @@ function greet() {
   return "Hi, Ed!"
 }
 
-let answer = greet()
-console.log(answer)
+console.log(greet())
