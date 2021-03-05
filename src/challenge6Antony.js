@@ -115,7 +115,7 @@ function readInput(sourceFile) {
 
 function encryption(string, sourceFile) {
     let output = '';
-    let cheatSheet = readInput(sourceFile);
+    let cheatSheet = readInput(sourceFile);     //  create Object using character_set.txt
     for(let i = 0; i < string.length; i++) {
         let charNum = cheatSheet[string[i]];
         output += charNum.toString();
@@ -125,8 +125,3 @@ function encryption(string, sourceFile) {
 
 let test = encryption('hello', 'character_set.txt');
 console.log(test);
-
-
-// readInput('character_set.txt');
-// console.log(characters);
-
