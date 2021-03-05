@@ -10,3 +10,15 @@ class Student{
 
 let student= new Student('lewis')
 console.log(student.capitalise())
+
+   
+
+
+
+
+
+    
+
+     
+
+>>>>>>> 01c5cd68480396781abfe8b7477618202ec1fc08
