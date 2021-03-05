@@ -110,8 +110,8 @@ encrypt(line,num){
 
     
     for (let i=0;i<line.length;i++){
-        let total=Number(this._characterSet[line[i]])+num
-        if (total<10){ //if number corresponding to letter +num <10
+        let total=Number(this._characterSet[line[i]])+num //sum of number fro dict+num
+        if (total<10){ //if total <10
             str+="0"+total
         }
         else if (Number(this._characterSet[line[i]])+num<99){
