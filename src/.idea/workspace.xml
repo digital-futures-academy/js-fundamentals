@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8530be7-162f-4ebd-8bcb-614ca46fc0cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/challenge5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge6.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenge6.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +37,13 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1614937628682">
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1614940454425">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1614937628682" />
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1614940454425" />
   </component>
 </project>
