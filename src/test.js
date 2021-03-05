@@ -43,3 +43,8 @@ function swap(inputObject) {
 
 let swappedObject = swap(cipher);
 console.group(swappedObject);
+
+
+let string = asdabs;
+let literal = String.raw(string);
+console.log(literal);
