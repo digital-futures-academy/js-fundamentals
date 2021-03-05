@@ -1,4 +1,7 @@
-const greeting = (name)=>{
-    return `Hi, ${name}!`
+const greeting = (name) => {
+    return `Hi, ${name}`
 }
-console.log(greeting('Petra'))
+
+
+console.log(greeting('Paulina'))
+

@@ -1,0 +1,14 @@
+In the programming context, being first-class, gives JavaScript functions the ability to be saved in 
+variables, passed around as arguments or even returned from other functions. Taking this a step further, 
+functions can reside inside objects as one of the properties.
+
+function sayHello() {
+   return "Hello, ";
+}
+function greeting(helloMessage, name) {
+  console.log(helloMessage() + name);
+}
+// Pass `sayHello` as an argument to `greeting` function
+greeting(sayHello, "JavaScript!");
+
+

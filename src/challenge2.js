@@ -1,4 +1,6 @@
-function greet(name){
-    return `Hi, ${name}!`
+function greet(name) {
+    return `Hi, ${name}`
 }
-console.log(greet('Petra'))
+
+console.log(greet('Paulina'))
+
