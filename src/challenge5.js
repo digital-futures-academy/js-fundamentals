@@ -1,4 +1,3 @@
-
 class Student {
     constructor(name){
         this.name = name
@@ -9,5 +8,6 @@ class Student {
     }
 }
 
-const student = new Student("petra")
+const student = new Student("asia")
 console.log(student.capitalisedName())
+
