@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8530be7-162f-4ebd-8bcb-614ca46fc0cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/challenge3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challenge2.js" beforeDir="false" afterPath="$PROJECT_DIR$/challenge2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/challenge5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,5 +36,11 @@
       <updated>1614858935219</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1614937628682">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1614937628682" />
   </component>
 </project>
