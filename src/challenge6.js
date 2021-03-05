@@ -4,15 +4,11 @@ console.log(alphabet.indexOf(' '))
 
 
 function convert(string){
-
-let ans = ''
-for (i = 0; i < string.length; i++) {
-    
-    ans += (alphabet.indexOf(string[i])+1)
-
-}
-console.log(ans)
-
+    let ans = ''
+    for (i = 0; i < string.length; i++) {
+        ans += (alphabet.indexOf(string[i])+1)
+    }
+    console.log(ans)
 }
 
 // ignore - playing around with merge
