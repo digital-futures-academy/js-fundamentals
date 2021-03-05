@@ -6,7 +6,7 @@ let score = {' ': 1, 'a': 2, 'b': 3, 'c': 4, 'd': 5, 'e': 6, 'f': 7, 'g': 8, 'h'
 '9': 96, '0': 97};
 
 const scores = (word) => {
-    let ans = 0;
+    let ans = '';
     for(let i = 0; i<word.length; i++){
         ans += score[word[i]]; 
     }
