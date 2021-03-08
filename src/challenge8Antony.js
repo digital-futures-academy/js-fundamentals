@@ -1,8 +1,8 @@
 const { off } = require('process');
 
 class LetterNumber {
-    constructor(){
-        this._cipher = {};
+    constructor(sourceFile){
+        this._cipher = this.createCipher(sourceFile);
     }
 
     set cipher(input) {
@@ -24,7 +24,7 @@ class LetterNumber {
             textArray[i][1] = number;
         }
         let textObject = Object.fromEntries(textArray);
-        this.cipher = textObject;
+        return textObject;
     }
 
     encrypt(string, offset) {
@@ -70,8 +70,8 @@ class LetterNumber {
     }
 }
 
-let letterNumber = new LetterNumber();
-letterNumber.createCipher('character_set.txt');
+let letterNumber = new LetterNumber('character_set.txt');
+// letterNumber.createCipher('character_set.txt');
 // let output = letterNumber.cipher;
 // console.log(output);
 letterNumber.encrypt('Hi, Ed!', 302);
@@ -82,6 +82,12 @@ letterNumber.decrypt("5429972051247320552040282934312039353325353425933920353420
 letterNumber.decrypt("69259338252027353434212034252524204035202335332520413620432940282021203425432035342598", 4771)
 letterNumber.decrypt("5520402829343120552028214225203041394020402825204028293427982047203225404025388332254040253820394122394029404140293534202329362825387320582540933920243520294073", 4771)
 
-let plaintext = "Any random string 8172<>{} asd"
+let plaintext = "Any random string 8172<>/{} asd"
 let offsetTest = 5
 console.log(plaintext === letterNumber.decrypt(letterNumber.encrypt(plaintext, offsetTest), offsetTest))
+
+
+plaintext = 'Look over there!'
+let testKey = 31045
+
+console.log(letterNumber.encrypt(plaintext, testKey)) // "97747470597481647759796764776413"
