@@ -16,3 +16,5 @@ $ cd js-fundamentals
 7. [Open a PR](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) back to this repository
 
 Then repeat steps 4-6 for each challenge!
+
+[Update your fork](https://gist.github.com/CristinaSolana/1885435#gistcomment-2857738) with new changes 
