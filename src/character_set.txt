@@ -74,7 +74,7 @@ const characterSet = {
     ':': 73,
     "'": 74,
     '"': 75,
-    '\\': 76,
+    "\": 76,
     '|': 77,
     ',': 78,
     '.': 79,
@@ -97,17 +97,3 @@ const characterSet = {
     '9': 96,
     '0': 97
 }
-
-function encryption (string){
-    let result = ''
-    for (letter in string){
-        for (const [key, value] of Object.entries(characterSet)){
-            if (key === string[letter]){
-                result = result + value
-            }
-        }
-        }
-        return result 
-
-    }
-    console.log(encryption ('   '))
