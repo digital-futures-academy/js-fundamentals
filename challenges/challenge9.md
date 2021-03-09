@@ -12,8 +12,8 @@ let plaintext = 'Look over there!'
 let key = 31045
 
 // Letter Number test cases
-console.log(letterNumberCipher.encrypt(plaintext, key)) // "97747470597481647759796764776413"
-console.log(letterNumberCipher.decrypt("97747470597481647759796764776413", key)) // 'Look over there!'
+console.log(letterNumberCipher.encrypt(plaintext, key)) // "84616157466168516446665451645199"
+console.log(letterNumberCipher.decrypt("84616157466168516446665451645199", key)) // 'Look over there!'
 
 // Letter Letter test cases
 console.log(letterLetterCipher.encrypt(plaintext)) // "B!!ym!9DAm2§DAD "
