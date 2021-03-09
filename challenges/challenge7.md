@@ -13,5 +13,5 @@ NB: Each encrypted plaintext character should never be more than two ciphertext 
 ```js
 letterNumber.encrypt("a", 1) // "03"
 letterNumber.encrypt("Ed", 4) // "3609"
-letterNumber.encrypt("Hi, Ed!", 302) // "40158306371059"
+letterNumber.encrypt("Hi, Ed!", 302) // "37128003340756"
 ```
