@@ -7,7 +7,7 @@ Your implementation should
 - Be agnostic to the actual values - the character values might change
 
 NB: plaintext = starting string. ciphertext = encrypted string
-NB: Each encrypted plaintext character should never be more than two ciphertext characters. If the evaluation of the encrypted character value is > 99, then reset from 0 and continue adding. Consequently, each encrypted plaintext character should always be two ciphertext characters: if the encrypted plaintext character results in a value of '8'  it should be '08' in ciphertext characters. See below for more test cases.
+NB: Each encrypted plaintext character should never be more than two ciphertext characters. If the evaluation of the encrypted character value is > 98, then reset from 0 and continue adding. Consequently, each encrypted plaintext character should always be two ciphertext characters: if the encrypted plaintext character results in a value of '8'  it should be '08' in ciphertext characters. See below for more test cases.
 
 ### Acceptance Criteria
 ```js
