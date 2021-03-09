@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8530be7-162f-4ebd-8bcb-614ca46fc0cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bank.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/challenge8.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +21,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../character_set.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -42,13 +40,13 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="98" key="FileChooserDialogImpl" timestamp="1615223763789">
+    <state x="740" y="98" key="FileChooserDialogImpl" timestamp="1615303607652">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="740" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1615223763789" />
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1615238083999">
+    <state x="740" y="98" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1615303607652" />
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1615303596425">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1615238083999" />
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1615303596425" />
   </component>
 </project>
