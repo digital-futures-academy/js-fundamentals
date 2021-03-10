@@ -24,7 +24,7 @@ class LetterNumberCipher {
             this.dic[this.array[x].split(', ')[0]]=this.array[x].split(', ')[1]
         }
         while (key > 99){
-            key-=99
+            key-=100
         }
 
         for (let i=0;i<plaintext.length;i++){
@@ -34,7 +34,7 @@ class LetterNumberCipher {
             } else if(code<=99){
                     str+=code;
             }else {
-                str+=code - 99
+                str+=code - 100
             }
         }
             return str
@@ -46,14 +46,14 @@ class LetterNumberCipher {
             this.dic[this.array[x].split(', ')[1]] = [this.array[x].split(', ')[0]]
         }
         while (key > 99){
-            key-=99
+            key-=100
         }
         for (let i=0;i<message.length;i+=2){
             let enc = +[message[i] + message[i+1]] - +key;
             if(enc>0){
                 str+= this.dic[enc];
             } else {
-                    str+= this.dic[+enc + 99];
+                    str+= this.dic[+enc + 100];
             }
         }
             return str
@@ -104,8 +104,9 @@ class LetterLetterCipher{
 letterNumberCipher = new LetterNumberCipher
 letterLetterCipher = new LetterLetterCipher
 console.log(letterNumberCipher.encrypt(plaintext, key));
-console.log(letterNumberCipher.decrypt("97747470597481647759796764776413", key))
+console.log(letterNumberCipher.decrypt("84616157466168516446665451645199", key))
 console.log(letterLetterCipher.encrypt(plaintext))
 console.log(letterLetterCipher.decrypt("B!!ym!9DAm2§DAD "))
+
 console.log(plaintext === letterNumberCipher.decrypt(letterNumberCipher.encrypt(plaintext, key), key))
 console.log(plaintext === letterLetterCipher.decrypt(letterLetterCipher.encrypt(plaintext)))
