@@ -1,0 +1,19 @@
+{
+  "name": "js-fundamentals",
+  "version": "1.0.0",
+  "description": "Training js Fundamentals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-futures-academy/js-fundamentals.git"
+  },
+  "author": "dearshrewdwit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digital-futures-academy/js-fundamentals/issues"
+  },
+  "homepage": "https://github.com/digital-futures-academy/js-fundamentals#readme"
+}
