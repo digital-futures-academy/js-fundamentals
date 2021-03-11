@@ -17,10 +17,10 @@ For a trainee named `Ed` in a cohort named `mse-2103-a`
 one possible implementation:
 ```sh
 $ npm install cipherworld-ed-mse-2103-a
-$ cipher -charset character_set2.txt ll -e example.txt
-$ cipher -charset character_set2.txt ll -d example.txt.enc
-$ cipher -charset character_set1.txt ln -e example.txt -k 123
-$ cipher -charset character_set1.txt ln -d example.txt.enc -k 123
+$ cipher -charset character_set2.txt -m ll -e example.txt
+$ cipher -charset character_set2.txt -m ll -d example.txt.enc
+$ cipher -charset character_set1.txt -m ln -e example.txt -k 123
+$ cipher -charset character_set1.txt -m ln -d example.txt.enc -k 123
 ```
 
 You might want to try different approaches - feel free to do so. Document your approach and share it with a coach when you do!
