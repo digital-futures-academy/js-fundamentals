@@ -19,38 +19,38 @@ let score = {' ': 1, 'a': 2, 'b': 3, 'c': 4, 'd': 5, 'e': 6, 'f': 7, 'g': 8, 'h'
 '|': 77, ',': 78, '.': 79, '<': 80, '>': 81, '/': 82, '?': 83, '`': 84, '~': 85, '§': 86, '±': 87, '1': 88, '2': 89, '3': 90, '4': 91, '5': 92, '6': 93, '7': 94, '8': 95,
 '9': 96, '0': 97};
 
-//have to module export at bottom make the methods and then take the arguments 
-//ll i think finds it 
-//also will have to read in the file
 const fs = require('fs');
 
-process.argv.forEach((val, index) => {
-    if(index === 1){
-        
-    }
-    console.log(`${index}: ${val}`);
+let request = [];
+
+process.argv.forEach((val) => {
+    request.push(val);
   });
 
-fs.readfile(fileName,'utf8', (err,data) => {
-    if(err){
-        console.error(err);
-        return
+const check = (func) =>{
+    if(func === 'numberEncrypt'){
+        numberEncrypt(request[3], request[4]);
     }
-    return data;
-})
+    else if(func === 'numberDecrypt'){
+        numberDecrypt(request[3], request[4]);
+    }
+    else if(func === 'letEncrypt'){
+        letEncrypt(request[3]);
+    }
+    else if(func === 'letterDecrypt'){
+        letterDecrypt(request[3]);
+    }
+    else{
+        throw new Error('Please choose a method');
+    }
+}
 
-fs.writeFile(filename, data, (err) => { 
-    if (err){
-        console.log(err);
-        return
-    } 
-}) 
 
-const numberEncrypt = (text, key) => {
-    let sentence = fs.readfile(text)
+const numberEncrypt = (text, key = 1) => {
+    let sentence = fs.readFileSync(text).toString();
     let ans = '';
-    for(let i = 0; i<text.length; i++){
-        let temp = score[text[i]] + key;
+    for(let i = 0; i<sentence.length; i++){
+        let temp = score[sentence[i]] + key;
         temp = temp % 99;
         if(temp < 10){
             ans += '0';
@@ -60,11 +60,16 @@ const numberEncrypt = (text, key) => {
             ans += temp;
         }
     }
-    return fs.writeFile(ans);
+    fs.writeFile((`${text}.enc`), ans, (err) => {
+        if(err){
+            console.log(err);
+            return;
+        }
+    })
 }
 
-const numberDecrypt = (text, key) => {
-    let sentence = fs.readfile(text);
+const numberDecrypt = (text, key = 1) => {
+    let sentence = fs.readFileSync(text).toString();
     let ans = '';
     for(let i = 0; i < sentence.length; i += 2){
         let temp = parseInt(sentence.slice(i, i+2)) - key;
@@ -80,32 +85,42 @@ const numberDecrypt = (text, key) => {
         }
         ans += Object.keys(score).find(key => score[key] === temp);
     }
-    return fs.writeFile(ans);
+    fs.writeFile((text.slice(0, text.length -4)), ans, (err) => {
+        if(err){
+            console.log(err);
+            return;
+        }
+    })
 }
 
 const letEncrypt = (text) => {
-    let sentence = fs.readfile(text);
+    let sentence = fs.readFileSync(text).toString();
     let ans = '';
     for(let i = 0; i<sentence.length; i++){
         let temp = letterEncrypt[sentence[i]];
         ans += temp;
     }
-    return fs.writeFile(ans);
+    return fs.writeFile((text + '.enc'), ans);
 }
 
 const letterDecrypt = (text) => {
-    let sentence = fs.readfile(text);
+    let sentence = fs.readFileSync(text).toString();
     let ans = '';
     for(let i = 0; i < sentence.length; i++){
         let temp = sentence[i];
         ans += Object.keys(letterEncrypt).find(key => letterEncrypt[key] === temp);
     }
-    return fs.writeFile(ans);
+    fs.writeFile((text.slice(0, text.length -4)), ans, (err) => {
+        if(err){
+            console.log(err);
+            return;
+        }
+    })
 }
  
-//need process funciton
-//need to check if encrypt or decrypt
-//if encrypt should write file into filename + enc
-//if decrypt should write file into filname - enc
+
+check(request[2]);
+
+
 
 
