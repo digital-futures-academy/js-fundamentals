@@ -14,4 +14,6 @@ $ cd js-fundamentals
 6. **Stage** and **commit** your changes and then **push** to your forked repository
 7. [Open a PR](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) back to this repository
 
+NB: Only open 1 Pull Request. Give your PR a title that includes your name. Your PR will automatically update as you push more work to your repository - so you should only ever need to have 1 PR for all the work you do for these exercises.
+
 Then repeat steps 4-6 for each challenge!
