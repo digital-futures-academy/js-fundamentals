@@ -1,0 +1,4 @@
+First class functions are functions that are treated like a first class object, they can be stored in varaibles, returned from other functions
+This concept applies in JavaScript as it uses first class functions meaning that higher order functions, partial function applcation and callbacks can all be used.
+Declaring a fucntion creates the function itself to be called upon anytime, calling a function is the process of running the function with given parameters to give an output. Example: function greet () {
+return console.log("Hi, Ed!")}; is declaring a function and calling it would be simply: greet();
