@@ -1,0 +1,18 @@
+First class functions occur when a programming language treats its functions like any other variable. This allows for functions to take functions as parameters.
+
+An example of which would be:
+
+// Created a const variable which is assigned a function which takes two parameters, a function & a name. We can pass a function as it is treated as a variable.
+const printName = function(changeName, name) { console.log(changeName(name));} 
+
+function reverseName (name) { 
+
+    return name.split('').reverse().join('');
+}
+//Call the function printName, sending the function reverseName function as a parameter. 
+printName(reverseName, "Ollie");
+
+
+Another way of getting the same result would be to call reverseName inside of printName, like such: printName(reverseName("Ollie));. 
+
+
