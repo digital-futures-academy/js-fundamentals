@@ -13,6 +13,19 @@ function reverseName (name) {
 printName(reverseName, "Ollie");
 
 
-Another way of getting the same result would be to call reverseName inside of printName, like such: printName(reverseName("Ollie));. 
+Declaring a function is when you create a function to perform a process when called, calling it is when you use the function.
+As shown below:
+
+//Declaring a function
+
+function greetGuest(name) { 
+	console.log(`Welcome to the manor ${name}!`);
+	}
+// The declared function won't actually run untill it is called, like as shown below:
+
+greetGuest("Ollie");
+
+Which will print to the console: "Welcome to the manor Ollie!".
+ 
 
 
