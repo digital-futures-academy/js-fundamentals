@@ -1,5 +1,5 @@
 const fs = require('fs')
-const filePath = 'C:/Users/Richard/Desktop/JavaScript/df/js-funamentals/js-fundamentals/challenges/tableofvalues/character_set2.txt'
+const filePath = './tableofvalues/character_set2.txt'
 
 // Save the contents of the text file as a string
 let text = fs.readFileSync(filePath, 'utf8')
