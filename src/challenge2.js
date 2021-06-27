@@ -1,4 +1,7 @@
-function greet(name) { // I added an argument inside the brackets called 'name'
-  return 'Hi, ${name}!'; 
+function hello (name) {
+    return `"hello, ${name}!"`
 }
-console.log(greet(read));
+console.log(hello("any"));
+
+
+

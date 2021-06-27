@@ -1,4 +1,4 @@
-const greet = name => { // This time using Arrow function
-  console.log('Hi, {name}!');
+const greet = name => {
+    console.log(`Hi,  ${name}! `);
 }
-greet(two);
+greet("ttest");
