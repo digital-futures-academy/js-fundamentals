@@ -1,0 +1,7 @@
+/* First class functions in JS or in any language are functions that language treats as values,
+in other words, they are not dependent on another function. It is like a mathematics when you have a higher 
+order binomial equation which depends on not just a constant value.
+
+Function declaration tells a unique name for the entity, along with information about its type and its parameters.
+While Function calling gives the definition of wat the function has to do. In challenge 1,
+I created a functions with no arguments (greet) this was the declaration line, and the I called it by greet().
