@@ -1,0 +1,31 @@
+A first class function is a function that is treated like any other variable, 
+it can be passed to another function as a parameter and also be returned by
+a function then set as the value of a variable.
+
+Example: function hello() {
+			return 'Hello!';
+		 }
+
+The example is a first class function as it fits the criteria to be 
+identified as one.
+
+This concept corresponds to the use of callback functions and higher-order
+functions which are signficantly used in JavaScript to perform numerous 
+important operations. Additionally, it means that functions have a superb 
+amount of flexiblity, capability, and potential.
+
+Example: function hello(getName()) {
+			const name = getName();
+			console.log(`Hello! ${name}!`);
+		 }
+
+getName() is a callback function because it's invoked within the higher-order
+function hello. It's higher-order because it takes a function as a parameter.
+
+Declaring a function means to define it. This consists of naming it and
+then writing code within it's body that will be executed after it's
+called. Calling a function refers to code that is responsible for
+executing the contents of the declared function.
+
+The first example is a declared function and on line 18, the getName 
+function is called and then assigned to the name variable. 
