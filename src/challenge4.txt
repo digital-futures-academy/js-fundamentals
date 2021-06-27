@@ -1,0 +1,40 @@
+- what `First Class` functions are
+
+> First class functions are functions that can be treated like a variable and therefore passed into another function as a callback function. (Is an anonymous function a first class function? - I guess not because it's not associated with a variable, but i don't know.)
+
+const square = (x) => {
+	return x*x
+}
+
+const applySquare = (func, num) => {
+	return func(num)
+}
+
+applySquare (square, 5)
+
+
+
+
+
+- how this concept applies in JS.
+
+> We can pass functions into other functions - I suppose it works the same way as in other languages.
+
+
+
+
+
+- what the difference is between declaring a function and calling it
+
+> Declaring a function means creating it so that it's ready to be called. Calling a function means actually using it. So you have to declare a function before you can use it.
+
+
+Declaration:
+
+const applySquare = (func, num) => {
+	return func(num)
+}
+
+Invocation (call): 
+
+applySquare (square, 5)
