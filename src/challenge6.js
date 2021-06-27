@@ -88,7 +88,7 @@ let dict = {
   "±": 87,
   "1": 88,
   "2": 89,
-  "3": 90.
+  "3": 90,
   "4": 91,
   "5": 92,
   "6": 93,
@@ -97,3 +97,14 @@ let dict = {
   "9": 96,
   "10": 97,
 }
+
+let encrypt = (cleanString) => {
+  let encryptedString = " ";
+  for (let i=0; i < cleanString.length; i++) {
+    encryptedString += dict[cleanString[i]];
+  };
+  return encryptedString;
+};
+
+encrypt("Hi, Ed!");
+console.log(encrypt("Hi, Ed!"));
