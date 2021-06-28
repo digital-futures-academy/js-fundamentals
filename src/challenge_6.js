@@ -1,4 +1,4 @@
-let dict = {
+const dict = {
    ' ': 1,
    'a': 2, 
    'b': 3,
@@ -96,20 +96,18 @@ let dict = {
    '8': 95,
    '9': 96,
    '0': 97,  
-}
+};
 
 let string = ("Hi, Ed!");
-let encrypt = (string) => {
-    let eString = ' ';
-    for (let i=0; i < string.length; i++) {
-        eString += dict[string[i]];
-      };
+console.log(string.length);
+const encrypt = (string) => {
+  let eString = ' ';
+  for (let i=0; i < string.length; i++) {
+      eString += dict[string[i]];
+  };
 
-      return eString;
-    }
+  return eString;
+}
 
-
-
-
-console.log(encrypt());
+console.log(encrypt(string));
 encrypt(string);
