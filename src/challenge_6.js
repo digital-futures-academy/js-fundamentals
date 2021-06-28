@@ -106,7 +106,7 @@ const encrypt = (string) => {
       eString += dict[string[i]];
   };
 
-  return eString;
+  return eString; //prints numbers
 }
 
 
