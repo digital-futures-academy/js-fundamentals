@@ -101,13 +101,29 @@ const dict = {
 let string = ("Hi, Ed!");
 console.log(string.length);
 const encrypt = (string) => {
+<<<<<<< HEAD
   let eString = ' ';
   for (let i=0; i < string.length; i++) {
       eString += dict[string[i]];
   };
+=======
+    let eString = ' ';
+    for (let i=0; i < string.length; i++) {
+        eString += dict[string[i]];
+      };
+
+      return eString;
+    }
+
+
+>>>>>>> d94753d50f30f5c4e41cfbda919f0cbdb2bbd944
 
   return eString;
 }
 
 console.log(encrypt(string));
+<<<<<<< HEAD
 encrypt(string);
+=======
+encrypt(string);
+>>>>>>> d94753d50f30f5c4e41cfbda919f0cbdb2bbd944
