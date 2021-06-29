@@ -104,7 +104,10 @@ const table = {
       this.name = name; 
       this.offset = offset;
       this.table = table;
-
+      // Create a reverse table
+     this.reverse_table = {};
+     
+     map(this.table.values(),this.table.keys(),)
       
     }
     //Encryption Method
@@ -137,13 +140,19 @@ const table = {
           let strLength = this.name.length
           let encryptArray = [];
 
+          // For loop to chunk the string to be decrypted. 
           for (let i = 0; i < strLength; i +=2) {
               encryptArray.push(this.name.slice(i, i + 2))
           }
 
-          strArray.forEach
+          // Look up the unencrypted value in the reverse cipher table. 
+          strArray.forEach(str => this.reverseTable[str])
 
-          return strArray
+          // Need to either reverse the cipher table so that the values and keys interchange roles or find a way to get a key given a value in an object literal.
+
+
+
+          return strArray.join()
       }
 
   }
