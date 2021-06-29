@@ -107,7 +107,7 @@ const table = {
 
       
     }
-
+    //Encryption Method
     encrypt() {
 
        let encryptedMessage = '';
@@ -122,30 +122,35 @@ const table = {
         }
         else{
             encryptedMessage = encryptedMessage + `${curNumber}`;
-        }
-
-      
-      
+        }   
     
     }
     return encryptedMessage
 
   }
+    //Decryption Method
+      decrypt() {
+          //Use this.name for now 
+          //Split the encrypted string into chunks of size 2 assuming that the string has been correctly formatted, so all entries are of length two. 
+
+
+          let strLength = this.name.length
+          let encryptArray = [];
+
+          for (let i = 0; i < strLength; i +=2) {
+              encryptArray.push(this.name.slice(i, i + 2))
+          }
+
+          strArray.forEach
+
+          return strArray
+      }
 
   }
 
-const letterNumber = new LetterNumber("a", 1, table);
+const letterNumber = new LetterNumber("020304", 0, table);
 
-console.log(letterNumber.encrypt() );
-
-const letterNumber2 = new LetterNumber("Ed", 4, table);
-
-console.log(letterNumber2.encrypt());
-
-const letterNumber3 = new LetterNumber("Hi, Ed!", 302, table);
-
-console.log(letterNumber3.encrypt());
-
+console.log(letterNumber.decrypt());
 /*letterNumber.encrypt("a", 1) // "03"
 letterNumber.encrypt("Ed", 4) // "3609"
 letterNumber.encrypt("Hi, Ed!", 302)   "37128003340756"
