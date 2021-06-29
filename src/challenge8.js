@@ -105,11 +105,24 @@ const table = {
       this.offset = offset;
       this.table = table;
       // Create a reverse table
-     this.reverse_table = {};
-     
-     map(this.table.values(),this.table.keys(),)
+     this._reverseTable = {};
       
     }
+
+    get reverseTable () {
+        let tableKeys = Object.keys(this.table);
+
+        const revTable = {};
+        // For loop
+        for (const key of tableKeys){
+            // Add new entry to the revTable object literal.
+            revTable[this.table[key]] = key;
+        }
+
+        return revTable
+    }
+
+
     //Encryption Method
     encrypt() {
 
@@ -159,7 +172,10 @@ const table = {
 
 const letterNumber = new LetterNumber("020304", 0, table);
 
-console.log(letterNumber.decrypt());
+console.log(letterNumber.reverseTable);
+
+//console.log(letterNumber.decrypt());
+
 /*letterNumber.encrypt("a", 1) // "03"
 letterNumber.encrypt("Ed", 4) // "3609"
 letterNumber.encrypt("Hi, Ed!", 302)   "37128003340756"
