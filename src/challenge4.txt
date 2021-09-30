@@ -1,0 +1,26 @@
+1. What are 'first class' functions? 
+
+'First Class' functions are functions that can be treated as variables. 
+
+2. How do 'first class' functions apply in js?
+
+In the context of js, they can be passed into functions as arguments. They can also have methods and properties like any other object in the JavaScript language.
+
+Example.
+const greet = name => "Hello," + " " + name + "!";
+Our 'greet' function has a length property.
+greet.length;
+We can also convert it to a string.
+greet.toString();
+
+3. Declaring vs Calling
+
+The difference between declaring a function and calling it is the difference between creating the function and running the function.
+When you declare a function, you populate the contents of the function body with code and define how that function behaves in doing so.
+When you call a function, you run the code inside the function body. 
+
+Example.
+// A greet function is declared.
+const greet = name => "Hello," + " " + name + "!";
+// The greet function is called.
+greet(name);
