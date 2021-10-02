@@ -1,0 +1,48 @@
+- what `First Class` functions are?
+
+First Class functions are functions that are simply values that are treated just like a variable. They can be stored in variables, they can be passed as arguments to other functions, they can return functions from other functionsa and methods can be called on them.
+
+Example:
+
+const foo = function() {
+   console.log("foobar");
+}
+foo(); 
+
+
+
+- how this concept applies in JS?
+
+They are used in Higher Order Functions which are functions that can receive another function as an argument, that returns a new function or do both. Withut First Class Functions Higher Order Functions could not be possible.
+
+Example:
+
+function sayHie() {
+   return "Hie, ";
+}
+function greeting(hieMessage, name) {
+  console.log(hieMessage() + name);
+}
+
+greeting(sayHie, "Christine!");
+
+
+
+- what the difference is between declaring a function and calling it?
+
+A function declaration is more like a function that defines a function with the specified parameters and just sits there doing nothing where as a function call is when you command the JavaScript interpreter to run the code that is written in that function.
+
+Example:
+Declaration:
+
+function greet(firstName) {
+    return `Hi, ${firstName}!`;
+}
+
+Function Call:
+
+greet('Christine');
+
+
+
+
