@@ -1,0 +1,37 @@
+Challenge 4
+
+What are First Class functions?:
+First class functions are functions which can be treated as other variables can be treated. This means that they can be returned from other functions or passed as arguments and assigned to other variables.
+
+Examples of a First Class Function:
+function greet() {
+    return 'Hello';
+} 
+
+const helloWorld = () => {
+    return 'Hello World!';
+};
+
+
+How this concept applies to JS:
+JavaScript treats functions as first-class objects meaning these functions are seen as values or another type of object.
+
+Example:
+const text = 'Hi';
+// logging the value of text to the console
+console.log(text);
+// logging the value returned from the function to the console
+console.log(helloWorld());
+
+
+What is the difference between declaring a function and calling it?:
+Calling a function runs the code written within the function body of the declared function, whereas declaring a function just creates a function.
+
+Example:
+//declared function which will return the sum of two numbers
+function addNumbers(num1, num2){
+    return num1 + num2;
+}
+
+//calling the above function to log the value returned
+console.log(addNumbers(4,7));
