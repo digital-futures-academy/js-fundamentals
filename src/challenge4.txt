@@ -1,0 +1,7 @@
+A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+First class functions are functions that are treated as variables. 
+This means that they can be assigned to other variables or can be used as a variable in other functions. 
+
+A function declaration consist of the name of the function, parameters (if any) in parentheses and the body of the function which includes js statements and in most cases a return value. 
+However just declaring function does not do anything. Calling the function
