@@ -1,0 +1,86 @@
+In a markdown or text file called challenge4.md or challenge4.txt, write an explanation of
+what First Class functions are
+how this concept applies in JS.
+what the difference is between declaring a function and calling it
+Bonus: give examples for each explanation
+
+1) First Class functions:
+- These are functions that are treated like normal variables. 
+- They can be assigned as a value to variables declared using let or const.
+- They can be passed as an argument to other functions.
+- They can be returned by another function. 
+- In the example below, an anonymous function (function without name) is assigned to a variable computeSquare declared using const.
+  
+  Eg1: Assigning function to variable
+        const computeSquare = function(num){ // anonymous function logging the square of given number i.e. num
+                    console.log(num * num); //9
+                    }   
+        computeSquare(3); // Invoking the function using variable computeSquare (function name) and the argument in paranthesis.         
+
+2) How this concept applies in JS?
+- As shown in the Eg1 above, first class functions can be assigned as a value to variables.
+
+- They can be passed as an argument to other functions. In the example below, computeSquare function (without paranthesis thereby treating it as a value) is passed as an argument to areaCircle function.
+  
+  Eg2: Passing function as an argument to another function
+        const computeSquare = function(num){
+                    return num * num;
+                    } //function computeSquare returns the square of the given number to the calling function i.e. areaCircle
+        
+        function areaCircle(square, num){ 
+            console.log(square(num) * 3.14); //logs the area of circle as 28.26
+        } 
+
+        areaCircle(computeSquare, 3); //computeSquare function is passed as an argument to areaCircle function
+
+- They can be returned by another function.
+
+    Eg3: Returning function in another function. 
+        const computeSquare = function (num) {
+                    return num * num;
+                    }
+
+        const areaCircle = function (square, num) {
+                    return function () { console.log(square(num) * 3.14); } // returning function to result
+                    }
+
+        const result = areaCircle(computeSquare, 3); //computeSquare function is passed as an argument to areaCircle function
+        result(); //invoking the function returned by areaCircle function 
+
+3) Difference between function declaration and calling it.
+- Function declaration refers to defining the function. 
+
+- It begins with the keyword function followed by the functionName and a list of parameters or arguments enclosed in paranthesis and separated by commas.
+
+- The function name and list of arguments is then followed by curly braces which includes the function body that implements the task the function is meant to perform.
+- Eg1:
+            function computeProduct(num1, num2){
+                console.log(num1 * num2);
+            }
+    In the above example, computeProduct is the name of the function and num1 and num2 are the arguments.
+    The content within {} is the body of the function which logs the product of num1 and num2;
+
+- Function decalaration simply defines the function, it won't execute the function. The function needs to be invoked separately inorder to exceute it and get the result.
+
+- To invoke a function we write the name of the function followed by arguments, if any, in the paranthesis. The function written in Eg1 above can be invoked as follows:
+            computeProduct(2,3); //6
+
+- Some other ways of declaring functions in JavaScript are using anonymous functions and arrow functions.
+
+- Eg2: Declaring using anonymous function. In anonymous functions, the function name is omitted.
+            const computeProduct = function(num1, num2){
+                console.log(num1 * num2);
+            }
+            computeProduct(2,3); //6
+
+-Eg3: Declaring using arrow function. In arrow functions, function keyword and function name are not used. We begin with list of arguments followed by fat arrow i.e. => and then the function body using curly braces {}.
+      If there are no parameters we just write () i.e. blank paranthesis.
+      If there is only a single argument the paranthesis for arguments can be omitted.
+      If there are more than one arguments we enclose them in paranthesis.
+
+            const computeProduct = (num1, num2) => {
+                console.log(num1 * num2);
+            }
+            computeProduct(2,3); //6
+
+- Irrespective of how a function is declared, functions are invoked using function name followed by list of arguments, if any, separated by commas within the paranthesis.
