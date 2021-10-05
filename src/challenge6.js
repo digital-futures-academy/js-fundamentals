@@ -7,17 +7,17 @@
 */
 
 function letterToNumber(fileName) {
-    let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+    let XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest; //reading the file locally using AJAX
     let file = new XMLHttpRequest();
     let substitution = {};
     file.open("GET", fileName, false);
     file.onreadystatechange = function () {
         if (file.readyState === 4) {
-            if (file.status === 200 || file.status == 0) {
+            if (file.status === 200 || file.status == 0) { //need to check for 0 as our file is stored locally and not available via web browser
                 let fileContent = file.responseText;
-                let lineArr = fileContent.split('\n');
+                let lineArr = fileContent.split('\n'); //filecontent is a string with every line in the file terminated by \n. this will create an array with each element of array representing individual line.
                 for (let i = 1; i < lineArr.length; i++) {
-                    let line = lineArr[i].split(', ');
+                    let line = lineArr[i].split(', '); //array of 2 elements i.e. character and corresponding number
                     let firstParam = line[0];
                     let secondParam = line[1].trim();
                     substitution[firstParam] = secondParam;
