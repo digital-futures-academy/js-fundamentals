@@ -1,0 +1,26 @@
+First class functions are functions that are treated as variables. 
+This means that they can be assigned to other variables or can be used as a variable in other functions. 
+
+
+A function declaration consist of the name of the function, parameters (if any) in parentheses and the body of the function which includes js statements.
+However just declaring function does not do anything. Calling the function will execute all the statments inside the body of the function.
+
+For example,
+
+//A Function declaration
+function sayHello(name = "Ed") {
+  return "Hi" + name;
+}
+
+//Assignment
+const greet = sayHello;
+
+//Passing it as an argument to another function
+function logHello(func) {
+  return console.log(func);
+}
+
+//Calling the function
+logHello(greet());
+
+This will output: "Hi Ed" to the console.
