@@ -9,10 +9,10 @@ class Student {
   constructor(name) {
     this.name = name;
   }
+  capitalizedName() {
+    return student.name[0].toUpperCase() + student.name.substring(1);
+  }
 }
-function capitalizedName() {
-  let student = new Student("asia");
-  return student.name[0].toUpperCase() + student.name.substring(1);
-}
-
-console.log(capitalizedName());
+let student = new Student("asia");
+student.capitalizedName();
+console.log(student.capitalizedName());
