@@ -1,8 +1,8 @@
 // Using the function keyword declare a function called `greet`
 // that returns a String "Hi, Ed!"
 
-function greet(){
-    return "Hi, Ed!"
+const  greet = (name) => {
+    return `Hi, ${name}!`
 }
 
-console.log(greet())
+console.log(greet("Ritthik and Josh"))
