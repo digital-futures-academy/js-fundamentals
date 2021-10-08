@@ -57,17 +57,15 @@ class LetterNumber {
 
         keyValue += cipherKey;
 
-      } else if (keyValue + cipherKey > 99) {
+      } else if ((keyValue + cipherKey) > 99) {
 
-        let x = cipherKey;
+        let x = 0;
 
-        do {
+        if (keyValue > cipherKey) {
 
-          x -= 100;
+          x = keyValue - cipherKey;
 
-        } while (x > 99);
-
-        keyValue += x;
+        }
       }
 
       // convert integer back to string
@@ -80,20 +78,10 @@ class LetterNumber {
 
       encodedMessage = encodedMessage.concat(backToString);
     }
-
     return encodedMessage;
   }
 }
 
-const letterNumber = new LetterNumber(letterNumberSubTable);
+const letNum = new LetterNumber(letterNumberSubTable);
 
-console.log((letterNumber.encrypt('Hi, Ed!', 302)));
-
-/*
-while (x > 99) {
-  cipherKey -= 100;
-  x = 0 + cipherKey;
-  keyValue = x;
-  console.log('keyValue = ' + keyValue);
-}
-*/
+console.log((letNum.encrypt('Hi, Ed!', 3)));
