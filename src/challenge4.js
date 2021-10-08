@@ -5,5 +5,5 @@
 const foo = function() {
    console.log("foobar");
 }
-
+foo();
 //But calling a function is when you make the function work: foo(); so it will say foobar in the console.

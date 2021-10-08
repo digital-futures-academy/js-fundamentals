@@ -1,3 +1,4 @@
 function greet(name){
-    return `Hi, ${name}!`
+    console.log( `Hi, ${name}!`);
 }
+greet('Lucy');
