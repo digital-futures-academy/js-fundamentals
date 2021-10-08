@@ -1,0 +1,34 @@
+ In a markdown or text file called `challenge4.md` or`challenge4.txt`, write an explanation of
+    - what`First Class` functions are
+        - how this concept applies in JS.
+- what the difference is between declaring a function and calling it
+    - Bonus: give examples for each explanation
+
+
+First class functions are functions that can :-
+
+1. Be assigned to variables.
+   
+    const greeting = () => {
+        return "Hello";
+    };
+
+2. Be passed as arguments to other functions.
+
+    const greetings = (greet, person) => {
+        return greet() + " " + person;
+    };
+
+3. Be returned from other functions.
+
+    const greetfunc = saygreeting => {
+        return person => {
+            return saygreeting + " " + person;
+        }
+    };
+
+    Difference between declaring a function and calling it.
+    
+    Declaring a function means to write the code and save it to a variable so it can be used once it has been called.
+
+    Calling a function means to run the code block of that particular function.
