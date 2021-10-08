@@ -1,0 +1,81 @@
+
+FIRST CLASS FUNCTIONS
+
+**************************************
+
+#Question 1:
+
+A first class function is a function that is treated like a variable. It can be parsed
+as an argument, returned by another function or be assigned to a variable.
+
+Example:
+
+// defining the first class function
+function itsYourBirthday(){
+    return "It's your birthday,";
+}
+
+// create the function that uses the first class function as an argument
+function announceBirthday(birthdayFunc, name){
+    console.log(birthdayFunc + name + "!");
+}
+
+// now parse the first class function into the the function that takes it as an argument
+announceBirthday(itsYourBirthday, "Luke");
+
+
+
+// assigning the function to a variable
+const addTwoToTwo = function() {
+    console.log("You added two to two!);
+    return 2 + 2;
+}
+
+// calling the variable 
+addTwoToTwo();
+
+**************************************
+
+QUESTION 2
+
+This concept applies to JS in that it allows code to remain DRY, or unrepeated, and ensures
+that code remains readable and easy to maintain.
+
+Example:
+
+// You could have one function and that requires an argument, but instead of writing the information 
+// for that argument every single time, you would just call the function that has the information in it
+
+function greet(name){
+    return "Hi, " + name + "!";
+}
+
+function birthday(greeting){
+    console.log(greeting + " It's your birthday!");
+}
+
+birthday(greet("Luke"));
+
+// outputs "Hi, Luke! It's your birthday!"
+
+**************************************
+
+QUESTION 3
+
+Declaring a function is where you construct all the working parts of a function. This defines the name,
+the arguments it takes, the algorithm inside the braces and what data it returns.
+
+Example:
+
+function favouriteAnimal(animal){
+    console.log("My favourite animal is " + animal);
+}
+
+Calling a function is where you invoke, or activate, the function you have just created so that it
+runs the code that is inside its braces.
+
+Example
+
+favouriteAnimal("the red panda");
+
+// prints out "My favourite animal is the red panda"
