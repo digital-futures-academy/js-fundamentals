@@ -4,3 +4,5 @@ One being the Higher-order function, in which you can use another function as a 
 Another being a callback function. This means you can pass a function, into another function.
 Javascript is a language that has first-class functions.
 A javascript example of a callback function could be array.map. This is a method, which is technically a function. However you can pass another function into .map!
+
+Declaring a function is basically the creation of the function, whereas calling a function asks it to do whatever that function does.
