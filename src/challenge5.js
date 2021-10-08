@@ -1,15 +1,18 @@
 
 
-class student{
+class Student{
 
-    constructor(name){
-        this.name = name;    
-    }
+  constructor(name) {
+    this.name = name;
+  }
 
-    captilisedName()
+  captilisedName() {
+
+    return this.name.charAt(0).toUpperCase() + this.name.slice(1);
+
+  }
 }
 
-
-let student = new Student("asia");
+let student = new Student('asia');
 
 student.captilisedName();
