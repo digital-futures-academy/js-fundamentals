@@ -1,9 +1,12 @@
 
 
-class student(name){
+class student{
 
-    student.name = name;
+    constructor(name){
+        this.name = name;    
+    }
 
+    captilisedName()
 }
 
 
