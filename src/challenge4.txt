@@ -1,0 +1,2 @@
+It is when a function can be treated like any other variable. It can be assigned to as an argument in another function, 
+it can be assigned to variables and can be returned by another function.
