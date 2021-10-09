@@ -1,0 +1,1 @@
+First-class functions are functions that can be treated like any other value. You can pass them to functions as arguments, return them from functions, and save them in variables.
