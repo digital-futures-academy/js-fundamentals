@@ -1,0 +1,5 @@
+First Class functions:
+
+First class functions are functions which in turn can be treated as first-order objects, such as variables. This means that they can be passed as an argument, or called on by another function.
+In relation to JavaScript first class functions are essential in designing code that can then be called on, invoked and involved in Higher order functions, all of which are essential in the design of code.
+The difference between declaring and calling a function, would be that declaring is the creation and assigning of instructions to that function, storing it within the code. Whereas calling a function is providing it with input, in order to execute the function declared.
