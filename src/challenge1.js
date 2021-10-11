@@ -6,3 +6,4 @@ function greet(){
 }
 
 console.log(greet());
+console.log(greet());
