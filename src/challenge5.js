@@ -14,7 +14,9 @@ function CapitalisePhrase(phrase) {
     // This is my first time throwing an error! Woo
 }
 
+
 function Student(name) {
+    // A constructor function for the Student class.
     this.name = name;
     this.capitalisedName = () => CapitalisePhrase(this.name);
 }
