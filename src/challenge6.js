@@ -46,7 +46,7 @@ function LetterNumber() {
 }
 
 const encryptor = new LetterNumber();
-const message1 = "";
+const message1 = "E";
 const message2 = "d";
 const message3 = "Ed";
 const message4 = "Hi, Ed!";
