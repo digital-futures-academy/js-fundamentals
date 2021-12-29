@@ -3,14 +3,14 @@ function CapitaliseWord(string) {
     if (typeof string === "string" && string != "") {
         // can't call .toUpperCase() method unless argument is a non-empty string
         return string[0].toUpperCase() + string.slice(1);
-    } else return "";
+    } else return string;
 }
 
 function CapitalisePhrase(phrase) {
     if (typeof phrase === "string" && phrase != "") {
         // can't call .split() method on empty or non-string
         return phrase.split(' ').map(CapitaliseWord).join(' ');
-    } else throw new Error("String passed must not be empty.");
+    } else throw new Error("Value passed must be a non-empty string.");
     // This is my first time throwing an error! Woo
 }
 
@@ -24,6 +24,10 @@ function Student(name) {
 let student = new Student("india may");
 console.log(student.capitalisedName());
 
-let emptyStudent = new Student("");
 // Below gives an error:
+// let nonStringStudent = new Student(7);
+// console.log(nonStringStudent.capitalisedName());
+
+// Likewise for:
+// let emptyStudent = new Student("");
 // console.log(emptyStudent.capitalisedName());
