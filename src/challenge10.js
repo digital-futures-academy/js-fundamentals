@@ -1,5 +1,5 @@
-const { charSet1, charSet2 } = require("../data/charSets");
 const fs = require("fs");
+const path = require("path");
 
 class Encrypter {
     constructor(charSet) {
@@ -9,8 +9,10 @@ class Encrypter {
     static parseCharSet(charSet) {
         return charSet.split("\n").reduce((acc, curr) => {
             const pairSplit = curr.split(", ");
-            acc.byChar[pairSplit[0]] = pairSplit[1];
-            acc.byVal[pairSplit[1]] = pairSplit[0];
+            const char = pairSplit[0];
+            const val = pairSplit[1].replace("\r", "");
+            acc.byChar[char] = val;
+            acc.byVal[val] = char;
             return acc;
         }, {byChar: {}, byVal: {}});
     }
@@ -66,15 +68,24 @@ if (!methods.includes(method)) throw new Error(`Expected ${method} to be one of:
 if (!file) throw new Error("No input file was provided.");
 if (_key && isNan(key)) throw new Error(`Expected ${key} to be a number.`);
 
-const encrypter = {
-    ln: () => new LetterNumber(charSet1),
-    ll: () => new LetterLetter(charSet2)
-}[cipher]();
+(async () => {
+    const charSet1 = await fs.promises.readFile(path.resolve(process.cwd(), "data", "charSet1.txt"), "utf-8");
+    const charSet2 = await fs.promises.readFile(path.resolve(process.cwd(), "data", "charSet2.txt"), "utf-8");
 
-console.log("Reading file...");
+    const encrypter = {
+        ln: () => new LetterNumber(charSet1),
+        ll: () => new LetterLetter(charSet2)
+    }[cipher]();
 
-fs.readFile(`${process.cwd()}/${file}`, "utf-8", (err, data) => {
-    if (err) throw err;
+    console.log("Reading file...");
+
+    const data = await (async () => {
+        try {
+            return await fs.promises.readFile(path.resolve(process.cwd(), file), "utf-8");
+        } catch (err) {
+            throw err;
+        }
+    })();
 
     console.log(method.charAt(0).toUpperCase() + method.slice(1) + "rypting file...");
 
@@ -83,13 +94,14 @@ fs.readFile(`${process.cwd()}/${file}`, "utf-8", (err, data) => {
         dec: () => encrypter.decrypt(data, key || 0)
     }[method]();
 
-    const path = file.split(".")[0] + (method === "enc" ? ".enc" : "") + ".txt";
-
     console.log("Writing file...");
 
-    fs.writeFile(`${process.cwd()}/${path}`, result, "utf-8", (err) => {
-        if (err) throw err;
+    const dest = file.split(".")[0] + (method === "enc" ? ".enc" : "") + ".txt";
 
+    try {
+        await fs.promises.writeFile(path.resolve(process.cwd(), dest), result, "utf-8");
         console.log("Process complete.");
-    })
-});
+    } catch (err) {
+        throw err;
+    }
+})();

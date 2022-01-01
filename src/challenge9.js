@@ -1,4 +1,5 @@
-const { charSet1, charSet2 } = require("../data/charSets");
+const fs = require("fs");
+const path = require("path");
 
 class Encrypter {
     constructor(charSet) {
@@ -8,8 +9,10 @@ class Encrypter {
     static parseCharSet(charSet) {
         return charSet.split("\n").reduce((acc, curr) => {
             const pairSplit = curr.split(", ");
-            acc.byChar[pairSplit[0]] = pairSplit[1];
-            acc.byVal[pairSplit[1]] = pairSplit[0];
+            const char = pairSplit[0];
+            const val = pairSplit[1].replace("\r", "");
+            acc.byChar[char] = val;
+            acc.byVal[val] = char;
             return acc;
         }, {byChar: {}, byVal: {}});
     }
@@ -49,16 +52,22 @@ class LetterLetter extends Encrypter {
     }
 }
 
-const letterNumberCipher = new LetterNumber(charSet1);
-const letterLetterCipher = new LetterLetter(charSet2);
+(async () => {
+    const charSet1 = await fs.promises.readFile(path.resolve(process.cwd(), "data", "charSet1.txt"), "utf-8");
+    const charSet2 = await fs.promises.readFile(path.resolve(process.cwd(), "data", "charSet2.txt"), "utf-8");
 
-let plaintext = 'Look over there!'
-let key = 31045
+    const letterNumberCipher = new LetterNumber(charSet1);
+    const letterLetterCipher = new LetterLetter(charSet2);
 
-// Letter Number test cases
-console.log(letterNumberCipher.encrypt(plaintext, key)) // "84616157466168516446665451645199"
-console.log(letterNumberCipher.decrypt("84616157466168516446665451645199", key)) // 'Look over there!'
+    let plaintext = 'Look over there!'
+    let key = 31045
 
-// Letter Letter test cases
-console.log(letterLetterCipher.encrypt(plaintext)) // "B!!ym!9DAm2§DAD "
-console.log(letterLetterCipher.decrypt("B!!ym!9DAm2§DAD ")) // 'Look over there!'
+    // Letter Number test cases
+    console.log(letterNumberCipher.encrypt(plaintext, key)) // "84616157466168516446665451645199"
+    console.log(letterNumberCipher.decrypt("84616157466168516446665451645199", key)) // 'Look over there!'
+
+    // Letter Letter test cases
+    console.log(letterLetterCipher.encrypt(plaintext)) // "B!!ym!9DAm2§DAD "
+    console.log(letterLetterCipher.decrypt("B!!ym!9DAm2§DAD ")) // 'Look over there!'
+})();
+

@@ -1,4 +1,5 @@
-const { charSet1 } = require("../data/charSets");
+const fs = require("fs");
+const path = require("path");
 
 class LetterNumber {
     constructor(charSet) {
@@ -6,9 +7,9 @@ class LetterNumber {
     }
 
     static parseCharSet(charSet) {
-        return charSet.split("\n").reduce((acc, curr) => {
+        return charSet.split("\n").slice(1).reduce((acc, curr) => {
             const pairSplit = curr.split(", ");
-            acc[pairSplit[0]] = pairSplit[1];
+            acc[pairSplit[0]] = pairSplit[1].replace("\r", "");
             return acc;
         }, {});
     }
@@ -23,8 +24,11 @@ class LetterNumber {
     }
 }
 
-const letterNumber = new LetterNumber(charSet1);
+fs.readFile(path.resolve(process.cwd(), "data", "charSet1.txt"), "utf-8", (err, data) => {
+    const letterNumber = new LetterNumber(data);
 
-console.log(letterNumber.encrypt("a", 1));
-console.log(letterNumber.encrypt("Ed", 4));
-console.log(letterNumber.encrypt("Hi, Ed!", 302));
+    console.log(letterNumber.encrypt("a", 1));
+    console.log(letterNumber.encrypt("Ed", 4));
+    console.log(letterNumber.encrypt("Hi, Ed!", 302));
+});
+

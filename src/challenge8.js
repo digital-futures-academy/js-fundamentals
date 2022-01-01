@@ -1,4 +1,5 @@
-const { charSet1 } = require("../data/charSets");
+const fs = require("fs");
+const path = require("path");
 
 class LetterNumber {
     constructor(charSet) {
@@ -8,8 +9,10 @@ class LetterNumber {
     static parseCharSet(charSet) {
         return charSet.split("\n").reduce((acc, curr) => {
             const pairSplit = curr.split(", ");
-            acc.byChar[pairSplit[0]] = pairSplit[1];
-            acc.byVal[pairSplit[1]] = pairSplit[0];
+            const char = pairSplit[0];
+            const val = pairSplit[1].replace("\r", "");
+            acc.byChar[char] = val;
+            acc.byVal[val] = char;
             return acc;
         }, {byChar: {}, byVal: {}});
     }
@@ -37,8 +40,10 @@ class LetterNumber {
     }
 }
 
-const letterNumber = new LetterNumber(charSet1);
+fs.readFile(path.resolve(process.cwd(), "data", "charSet1.txt"), "utf-8", (err, data) => {
+    const letterNumber = new LetterNumber(data);
 
-console.log(letterNumber.decrypt("0681497203762572077292808186837291878577878677459172878672928772928081917275818880779025", 4771));
-console.log(letterNumber.decrypt("21774590777279878686737286777776729287727587857772938872958192807273728677957287867750", 4771))
-console.log(letterNumber.decrypt("0772928081868372077280739477728293919272928077729280818679507299728477929277903584779292779072919374919281929392818786727581888077902572107792459172768772819225", 4771))
+    console.log(letterNumber.decrypt("0681497203762572077292808186837291878577878677459172878672928772928081917275818880779025", 4771));
+    console.log(letterNumber.decrypt("21774590777279878686737286777776729287727587857772938872958192807273728677957287867750", 4771))
+    console.log(letterNumber.decrypt("0772928081868372077280739477728293919272928077729280818679507299728477929277903584779292779072919374919281929392818786727581888077902572107792459172768772819225", 4771))
+});
