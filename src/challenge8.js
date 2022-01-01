@@ -7,7 +7,7 @@ class LetterNumber {
     }
 
     static parseCharSet(charSet) {
-        return charSet.split("\n").reduce((acc, curr) => {
+        return charSet.split("\n").slice(1).reduce((acc, curr) => {
             const pairSplit = curr.split(", ");
             const char = pairSplit[0];
             const val = pairSplit[1].replace("\r", "");

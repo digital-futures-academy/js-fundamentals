@@ -1,13 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
-class Encrypter {
+class EncrypterBase {
     constructor(charSet) {
-        this.charDict = LetterNumber.parseCharSet(charSet);
+        this.charDict = EncrypterBase.parseCharSet(charSet);
     }
 
     static parseCharSet(charSet) {
-        return charSet.split("\n").reduce((acc, curr) => {
+        return charSet.split("\n").slice(1).reduce((acc, curr) => {
             const pairSplit = curr.split(", ");
             const char = pairSplit[0];
             const val = pairSplit[1].replace("\r", "");
@@ -18,7 +18,7 @@ class Encrypter {
     }
 }
 
-class LetterNumber extends Encrypter {
+class LetterNumber extends EncrypterBase {
     encrypt(str, offset) {
         return str.split("").reduce((acc, curr) => {
             const val = this.charDict.byChar[curr];
@@ -42,7 +42,7 @@ class LetterNumber extends Encrypter {
     }
 }
 
-class LetterLetter extends Encrypter {
+class LetterLetter extends EncrypterBase {
     encrypt(str) {
         return str.split("").reduce((acc, curr) => acc + (this.charDict.byChar[curr] || ""), "");
     }
