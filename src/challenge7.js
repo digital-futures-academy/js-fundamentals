@@ -17,9 +17,9 @@ class LetterNumber {
             //console.log(encryptionCharSet[i] + ' ' + (i + 1));
             if (value === this.encryptionCharSet[i]) //Compare the inserted value to a character in the array
             {
-                let answer = (offsetKey + i + 1) % 100; //+1 because the index of encrpytionCharSet starts at 0 instead of 1
+                let answer = (offsetKey + i + 1) % 100; //+1 because the index of encrpytionCharSet starts at 0 instead of 1, and MOD 100 because it must always be 2 digits, even when above 100 it should start counting from 00 again
                 if (answer < 10) {
-                    answer = '0' + answer;
+                    answer = '0' + answer; //Make sure it's always two digits, even when below 10
                 }
                 return answer;
             }
