@@ -1,0 +1,23 @@
+First class functions are functions that are treated 'fist-class'. Essentially, they can be treated just like any other variable.
+First Class functions can pass functions as arguments for other functions:
+
+
+greetFunc(myNameFunc);
+
+use functions in the return statement:
+myAgeFunc() {
+ return randNumFunc;
+}
+
+as well as assign functions to variables:
+let greetFunc = name => `Hello ${name}`;
+
+Declaring a function is different to calling a function
+Declaring is assigning and creating the function, creating a definition for it and code to follow through when it is called. Declaring is also where required or optional arguments are created:
+let greetFunc = name => {
+ return `Hello ${name}`;
+}
+
+When calling the function, it runs through the function with any submitted arguments:
+greetFunc('Rogan');
+// returns "Hello Rogan"
