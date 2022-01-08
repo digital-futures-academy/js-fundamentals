@@ -1,0 +1,28 @@
+#### Requirements
+In a markdown or text file called `challenge4.md` or `challenge4.txt`, write an explanation of
+- what `First Class` functions are
+
+A first class function is a function that can be treated like any other value. You can pass them to functions as arguments, return them from functions, and save them in variables.
+
+- how this concept applies in JS.
+
+In javascript functions are first class objects meaning a programmer can take advantage of powerful design patterns such as higher-order functions, partial function application, callbacks, and more.
+
+- what the difference is between declaring a function and calling it
+
+A function declaration is when you write the function’s name, return type, parameters and method body.
+Calling a function is executing the code within a function with the given parameters to provide a output.
+
+// Function definition
+function speak(string) {
+  console.log(string)
+}
+
+// function call
+speak("Hello")                 
+
+- Bonus: give examples for each explanation
+
+
+
+ 
