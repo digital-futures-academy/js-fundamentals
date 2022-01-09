@@ -1,0 +1,19 @@
+In JavaScript, the term 'first-class' functions refers to paralleled behaviour of functions with other variables. Particularly, JavaScript functions 
+are often denoted as first class objects. This means that like other objects, JavaScript functions can have properties and methods;
+can be assigned to any other variable; passed as an argument; passed into other functions as parameters; and can be returned by another function.
+
+Declaring a function (1) vs Calling a function (2) - 
+
+Function declarations load prior to code execution. A function declaration does not ask the code inside the function body to run, it simply declares the existence of the function.
+Additionally, declared functions are hoisted and so, they are initialized at compile time and available anywhere in your file. On the contrary, function calls execute the function
+body. 
+
+Example (1) //
+
+function reminderAlert () {
+  console.log("The meeting should be scheduled for tomorrow.")
+};
+
+Example (2) //
+
+reminderAlert();
