@@ -21,3 +21,4 @@ NB: Only open 1 Pull Request. Give your PR a title that is your first name and l
 Then repeat steps 4-6 for each challenge!
 
 The directory `challenges` holds files challenges 1-11, named accordingly. The directory `src` is currently mostly empty - this is where you should add files with the implementation of each challenge. Sometimes you might need to copy paste your previous challenge so you can extend it. Therefore there should be a `src` file for every challenge file. Eg: `challenges/challenge3.md` and `src/challenge3.js`.
+test
