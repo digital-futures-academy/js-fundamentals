@@ -1,0 +1,57 @@
+First Class functions
+
+First Class functions are those functions that can be used as arguments to other functions, can be returned by another function and can be assigned as a value to a variable.
+In Javascript those functions are treated like 'first class citizens' and can be used in many ways. Below are examples and explanation on how JS uses first class functions.
+
+-Stored as a value in a variable
+eg: 
+function addNumbers(a,b) {  // creating the function and setting the parameters 
+    return a + b;
+}
+let sum = addNumbers; // assigning the function to a variable called sum
+let result = sum(3,4); // returns 7  // invoking the function using the variable sum to which we assigned the function, both sum and addNumbers are pointing to the same address and this is why they return the expected result
+
+
+-Passing the function as an argument to another function
+
+Because this type of functions behave as values too they can be passed as arguments to another function
+eg:
+function addNumbers(a, b)   // create a function to add 2 numbers
+{
+    return a + b;
+}
+let assign = addNumbers;  //assign the function to a variable
+
+function average(a, b, c)  // create a function to find the average 
+{
+    return c(a, b) / 2;  //this function returns a function that calculates the average
+}
+let result = average(10, 20, assign);  // the function to calculate the average is assigned to a variable and the first function is used as a parameter 
+console.log(result);  // logs the result
+
+-Calling a function from another function
+
+In Javascript we can also have a function within another function. The first one it is called Higher-Order function because can make a first class function to be returned from it as a value.
+eg:
+function example()    // create a function to store another function
+{
+    return function message()  //function that has a message to return within the main function
+    {
+        console.log('Hi there!');
+    }
+}
+const funcToReturn = example();   //save the higher-order function in a constant
+funcToReturn();   // call the function with the help of the constant
+
+With function in another function we can also use double paranthesis to call the inner function
+eg:
+
+example()()  // returns the same message 'Hi there!'
+
+Declaring a function and calling it
+When we declare a function we are writting all the code in the function and the function just sits there and does nothing.
+
+When we call the function we tell the interpreter to do something with the code we have written earlier in the function
+
+
+
