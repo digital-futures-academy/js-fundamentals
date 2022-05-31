@@ -22,7 +22,7 @@ function checkEven(func, number) {
         return `${func(number)} is an even number.`;
     };
 };
-checkEven(double, 10); //Returns 20.
+checkEven(double, 10); //Returns 20  is an even number.
 In the example above, we passed the function double() as an argument of the function checkEven(). 
 
 # Declaring a function
