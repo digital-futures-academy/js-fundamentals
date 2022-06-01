@@ -1,11 +1,12 @@
 function encrypt(sentence) {
-    const alphabet = 'abcd';
-    let codedSentence = [];
+    const alphabet = ' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*()-_=+[]{};:\'"\\|,.<>/?`~§±1234567890';
+    let codedArray = [];
+    let codedSentence;
 
     for (var i = 0; i < sentence.length; i++) {
         let characterIndex = sentence[i];
-        codedSentence.push(alphabet.indexOf(characterIndex) + 1);
+        codedArray.push(alphabet.indexOf(characterIndex) + 1);
     };
-    return codedSentence;
+    return codedSentence = codedArray.join('');
 };
-console.log(encrypt('bcda'));
+encrypt('Hi, Ed!');
