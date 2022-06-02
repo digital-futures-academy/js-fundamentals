@@ -1,0 +1,15 @@
+- what `First Class` functions are
+- how this concept applies in JS.
+- what the difference is between declaring a function and calling it
+- Bonus: give examples for each explanation
+
+-first class functions are treated like variables, can be passed as arguments to other 
+functions and also returned from a function. They are treated as 'firstclass citizens' 
+-This helps us to create call back functions and higher order functions
+-The difference is that when you declare a function you are only saying what you want the 
+function to do and so it just sits there. Calling a function is telling javascript to run 
+the code inside your function
+example declaring:                       example calling:
+ const welcome = ()=>{                               welcome(); //outputs 'Hello there!'
+    console.log('Hello there!');
+}
