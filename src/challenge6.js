@@ -4,7 +4,7 @@ const encryptAString = inputString => {
     let smallStartingValue = 2;
     let capitalLetters = 'ABCDEFGHIJKLMNOPQRSTUV';
     let capitalStartingValue = 28;
-    let specialChar1 = '!@£$%^&*()-_=+[]{};:'
+    let specialChar1 = '!@£$%^&*()-_=+[]{};:';
     let specialChar1Start = 54;
     let specialChar2 = '"\|,.<>/?`~§±';
     let specialChar2Start = 76;
@@ -34,4 +34,4 @@ const encryptAString = inputString => {
     result = result.join("");
     console.log(result);
 }
-encryptAString("ArO osa");
+encryptAString("aroosa");
