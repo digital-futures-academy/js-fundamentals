@@ -17,9 +17,9 @@ console.log("character.set('', " + i + ")")
 }; 
 */
 
-const str = 'bad'
+const str = 'Hi, Ed!'
 
-//let code = "";
+let code = "";
 
 for (i = 0; i < str.length; i++) {
     let char = str.charAt(i);
@@ -125,8 +125,10 @@ for (i = 0; i < str.length; i++) {
     character.set('9', 96)
     character.set('0', 97)
 
+    code = code + character.get(char)
+    console.log(code)
 
-    console.log(character.get(char))
+    //console.log(character.get(char))
 
 }
 
