@@ -1,4 +1,4 @@
-const greet = name => {
+function greet(name) {
     return `Hi, ${name}!`;
 }
 console.log(greet('john'));
