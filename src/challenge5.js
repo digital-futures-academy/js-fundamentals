@@ -14,7 +14,7 @@ class Student
         this.name = name;
 
     }
-    newWord()
+    capitalisedName()
     {
         let student = this.name.charAt(0).toUpperCase() + this.name.slice(1);
         return student;
@@ -22,8 +22,7 @@ class Student
 
 }
 let student = new Student('roxana');
-student.newWord();
-console.log(student.newWord());
+console.log(student.capitalisedName());
 
 
 
