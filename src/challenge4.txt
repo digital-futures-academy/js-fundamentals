@@ -1,0 +1,4 @@
+First class functions means the functions are values that can be assigned to variables or other functions as parameters.
+In javaScript we can declare a function and assign it to variable or pass it as parameter without using paranthesis because they are being treated as values, in this case both the function and variable that holds functions refer to same memory location.
+Declaring function means creating function body by following syntax like using function keyword or by arrow method, while calling function means actually making use of function by using function name and passing argument if required to get the result of code inside function. If we dont call function we can get benefit of code written inside function body.
+Code examples are on challenge4.js file
