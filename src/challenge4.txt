@@ -1,0 +1,29 @@
+A first class function is where a function is created containing a data type, then assigned to a variable.
+The variable can then represent the function which can later be invoked. e.g.
+
+function square (x) {
+    return x*x ;
+}
+
+let times = square
+
+when run the variable 'times' will act as the function above. e.g.
+
+console.log(times(10))
+OUTPUT = 100
+
+what the difference is between declaring a function and calling it?
+
+Declaring a function is done by using the key word 1) function followed by the 2)function name, 
+after this we have the function 3) parameters aka input inside of the () parentheses then we have
+4) a function body inside of {} curly braces. finally 5) a return is added. 
+
+These 5 items collectively are the most common form of function declaration.
+
+Calling a function is different after the function has been created and added to a variable.
+we can call the function via the console.log()
+
+Using the example above 
+
+Console.log(times(10))
+OUTPUT = 100
