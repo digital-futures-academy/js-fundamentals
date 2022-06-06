@@ -1,315 +1,111 @@
-encrypter = message => {
-    let encryptedMessage;
-
-    const messageArr = message.split('');
-
-    let encryptedMessageArr = [];
-
-    for (i = 0; i < messageArr.length; i++) {
-        let character;
-        switch (messageArr[i]) {
-            case ' ':
-                character = '1'
-                break;
-            case 'a':
-                character = '2'
-                break;
-            case 'b':
-                character = '3'
-                break;
-            case 'c':
-                character = '4'
-                break;
-            case 'd':
-                character = '5'
-                break;
-            case 'e':
-                character = '6'
-                break;
-            case 'f':
-                character = '7'
-                break;
-            case 'g':
-                character = '8'
-                break;
-            case 'h':
-                character = '9'
-                break;
-            case 'i':
-                character = '10'
-                break;
-            case 'j':
-                character = '11'
-                break;
-            case 'k':
-                character = '12'
-                break;
-            case 'l':
-                character = '13'
-                break;
-            case 'm':
-                character = '14'
-                break;
-            case 'n':
-                character = '15'
-                break;
-            case 'o':
-                character = '16'
-                break;
-            case 'p':
-                character = '17'
-                break;
-            case 'q':
-                character = '18'
-                break;
-            case 'r':
-                character = '19'
-                break;
-            case 's':
-                character = '20'
-                break;
-            case 't':
-                character = '21'
-                break;
-            case 'u':
-                character = '22'
-                break;
-            case 'v':
-                character = '23'
-                break;
-            case 'w':
-                character = '24'
-                break;
-            case 'x':
-                character = '25'
-                break;
-            case 'y':
-                character = '26'
-                break;
-            case 'z':
-                character = '27'
-                break;
-            case 'A':
-                character = '28'
-                break;
-            case 'B':
-                character = '29'
-                break;
-            case 'C':
-                character = '30'
-                break;
-            case 'D':
-                character = '31'
-                break;
-            case 'E':
-                character = '32'
-                break;
-            case 'F':
-                character = '33'
-                break;
-            case 'G':
-                character = '34'
-                break;
-            case 'H':
-                character = '35'
-                break;
-            case 'I':
-                character = '36'
-                break;
-            case 'J':
-                character = '37'
-                break;
-            case 'K':
-                character = '38'
-                break;
-            case 'L':
-                character = '39'
-                break;
-            case 'M':
-                character = '40'
-                break;
-            case 'N':
-                character = '41'
-                break;
-            case 'O':
-                character = '42'
-                break;
-            case 'P':
-                character = '43'
-                break;
-            case 'Q':
-                character = '44'
-                break;
-            case 'R':
-                character = '45'
-                break;
-            case 'S':
-                character = '46'
-                break;
-            case 'T':
-                character = '47'
-                break;
-            case 'U':
-                character = '48'
-                break;
-            case 'V':
-                character = '49'
-                break;
-            case 'W':
-                character = '50'
-                break;
-            case 'X':
-                character = '51'
-                break;
-            case 'Y':
-                character = '52'
-                break;
-            case 'Z':
-                character = '53'
-                break;
-            case '!':
-                character = '54'
-                break;
-            case '@':
-                character = '55'
-                break;
-            case '£':
-                character = '56'
-                break;
-            case '$':
-                character = '57'
-                break;
-            case '%':
-                character = '58'
-                break;
-            case '^':
-                character = '59'
-                break;
-            case '&':
-                character = '60'
-                break;
-            case '*':
-                character = '61'
-                break;
-            case '(':
-                character = '62'
-                break;
-            case ')':
-                character = '63'
-                break;
-            case '-':
-                character = '64'
-                break;
-            case '_':
-                character = '65'
-                break;
-            case '=':
-                character = '66'
-                break;
-            case '+':
-                character = '67'
-                break;
-            case '[':
-                character = '68'
-                break;
-            case ']':
-                character = '69'
-                break;
-            case '{':
-                character = '70'
-                break;
-            case '}':
-                character = '71'
-                break;
-            case ';':
-                character = '72'
-                break;
-            case ':':
-                character = '73'
-                break;
-            case "'":
-                character = '74'
-                break;
-            case '"':
-                character = '75'
-                break;
-            case '[\]':
-                character = '76'
-                break;
-            case '|':
-                character = '77'
-                break;
-            case ',':
-                character = '78'
-                break;
-            case '.':
-                character = '79'
-                break;
-            case '<':
-                character = '80'
-                break;
-            case '>':
-                character = '81'
-                break;
-            case '/':
-                character = '82'
-                break;
-            case '?':
-                character = '83'
-                break;
-            case '`':
-                character = '84'
-                break;
-            case '~':
-                character = '85'
-                break;
-            case '§':
-                character = '86'
-                break;
-            case '±':
-                character = '87'
-                break;
-            case '1':
-                character = '88'
-                break;
-            case '2':
-                character = '89'
-                break;
-            case '3':
-                character = '90'
-                break;
-            case '4':
-                character = '91'
-                break;
-            case '5':
-                character = '92'
-                break;
-            case '6':
-                character = '93'
-                break;
-            case '7':
-                character = '94'
-                break;
-            case '8':
-                character = '95'
-                break;
-            case '9':
-                character = '96'
-                break;
-            case '0':
-                character = '97'
-                break;
-            default:
-                character = messageArr[i];
-                break;
-
-        }
-        encryptedMessageArr.push(character);
-
-    }
-    encryptedMessage = encryptedMessageArr.join('');
-    return encryptedMessage
-
+const newValues = {
+    ' ': 1,
+    'a': 2,
+    'b': 3,
+    'c': 4,
+    'd': 5,
+    'e': 6,
+    'f': 7,
+    'g': 8,
+    'h': 9,
+    'i': 10,
+    'j': 11,
+    'k': 12,
+    'l': 13,
+    'm': 14,
+    'n': 15,
+    'o': 16,
+    'p': 17,
+    'q': 18,
+    'r': 19,
+    's': 20,
+    't': 21,
+    'u': 22,
+    'v': 23,
+    'w': 24,
+    'x': 25,
+    'y': 26,
+    'z': 27,
+    'A': 28,
+    'B': 29,
+    'C': 30,
+    'D': 31,
+    'E': 32,
+    'F': 33,
+    'G': 34,
+    'H': 35,
+    'I': 36,
+    'J': 37,
+    'K': 38,
+    'L': 39,
+    'M': 40,
+    'N': 41,
+    'O': 42,
+    'P': 43,
+    'Q': 44,
+    'R': 45,
+    'S': 46,
+    'T': 47,
+    'U': 48,
+    'V': 49,
+    'W': 50,
+    'X': 51,
+    'Y': 52,
+    'Z': 53,
+    '!': 54,
+    '@': 55,
+    '£': 56,
+    '$': 57,
+    '%': 58,
+    '^': 59,
+    ';': 60,
+    '*': 61,
+    '(': 62,
+    ')': 63,
+    '-': 64,
+    '_': 65,
+    '=': 66,
+    '+': 67,
+    '[': 68,
+    ']': 69,
+    '{': 70,
+    '}': 71,
+    ';': 72,
+    ':': 73,
+    "'": 74,
+    '"': 75,
+    '\\': 76,
+    '\|': 77,
+    ',': 78,
+    '.': 79,
+    '<': 80,
+    '>': 81,
+    '/': 82,
+    '?': 83,
+    '`': 84,
+    '~': 85,
+    '§': 86,
+    '±': 87,
+    '1': 88,
+    '2': 89,
+    '3': 90,
+    '4': 91,
+    '5': 92,
+    '6': 93,
+    '7': 94,
+    '8': 95,
+    '9': 96,
+    '0': 97
 };
-console.log(encrypter('Hi, Ed!'));
+
+
+const encrypt = message => {
+    let encryptedMessage = '';
+    for (let i = 0; i < message.length; i++) {
+        encryptedMessage += newValues[message[i]]
+    }
+    return encryptedMessage;
+};
+
+console.log(encrypt('Hi, Ed!'));
 
