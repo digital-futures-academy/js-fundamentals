@@ -1,0 +1,15 @@
+First Classs Function :
+    when the functions of a programming language are treated like variables are considered as first class functions. For example a function can be assigned as a value to a variable or passed to another function as an argument or can be returned by another function.
+    In Js functions are just values like objects.
+
+Declaring a function vs calling it:
+     declaring a function is when the function is defined or structured. when we first define a fuction we give it a name, parameters, write some codes inside the function block and return something, but the code is just there doing nothing. 
+     calling the function with () at the end of its name is when we tell javascript to run the function we declared. Henc, a function is a block of codes that can be run mutiple times by calling its name.
+
+    Example of declaring a funtion : 
+        funtion greet(){
+            console.log('Hello')
+        }
+    
+    Example of calling a funtion : 
+        greet()
