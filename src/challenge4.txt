@@ -1,0 +1,14 @@
+A first class function is a function that can be treated like any other variable. In
+javascript a first class function is treated as a first class citizen which means that
+it is another type of object.
+This means that a first class functions support all the operations which are allowed to other javacript objects.
+Therefore a first class function in javascript can:
+
+Can be stored as a value in a variable
+Can be returned by another function
+Can be passed as a function's argument
+Can be stored in an array, stack, or queue
+Can have its own properties and methods.
+
+A function declaration, defines a function with sometimes specified paramaters without executing it.
+A function call, executes a function whilst sometimes providing arguments with it.
