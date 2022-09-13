@@ -1,0 +1,29 @@
+A first class function is a function that is treated like a first class citizen. 
+
+This means it supports:-
+
+Passing the function as an argument to other functions.
+Returns the value from the other functions and storing or assigning them into variables.
+By declaring the function we can tell the computer about the function name and how to call it.
+By calling the function we are telling the computer the run the block of the code and it returns the value.
+
+Eg of Function
+
+function example(){
+
+console.log("Hello Digital Future").
+}
+
+Calling the function 
+
+example();
+
+
+
+
+
+
+
+
+
+
