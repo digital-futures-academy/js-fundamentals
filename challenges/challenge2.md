@@ -3,7 +3,7 @@ Declare a `function` called `greet` that has 1 argument called `name` and return
 
 // Mo Razavi code 
 
-const greet = (name) =>{
+function greet(name){
     return `Hi, ${name}!`
 }
 
