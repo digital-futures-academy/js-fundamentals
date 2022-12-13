@@ -1,0 +1,7 @@
+- first class functions is a function created that is treated like a variable. So they can hold a value (or nothing at all), can just be a long code that get executed and can be called within other functions.
+
+- in javascript you can give a function a name and to call it within a code you can just use the name of the function.
+
+- when you declare a function you state what you want the function to do when it is called within a body of code. example is challenge1 where we declared the function greet() to return the string 'Hi, Ed!'
+
+when you call a function you are asking the code to execute the code within the function called. for example to call the function created in challenge1 we would put 'console.log(greet());' in the body of code and when it is run the console will read 'Hi, Ed!'
