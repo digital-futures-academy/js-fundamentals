@@ -4,7 +4,7 @@ Using the `function` keyword to declare a function called `greet` that returns a
 
 //Mo Razavi code
 
-const greet = () => {
+function greet(){
     return 'Hi, Ed!'
 }
 //calling the function + log
