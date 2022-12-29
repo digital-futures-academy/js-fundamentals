@@ -1,305 +1,305 @@
 const encrypt = (str) => { 
 
-    let encryptedConst = "";
+    let encryptedStr = "";
 
     for(var i = 0; i <= str.length; i++){
         switch(str.charAt(i)){
             case " ":
-                encryptedConst += "1";
+                encryptedStr += "1";
                 break;
             case "a":
-                encryptedConst += "2";
+                encryptedStr += "2";
                 break;
             case "b":
-                encryptedConst += "3";
+                encryptedStr += "3";
                 break;
             case "c":
-                encryptedConst += "4";
+                encryptedStr += "4";
                 break;
             case "d":
-                encryptedConst += "5";
+                encryptedStr += "5";
                 break;
             case "e":
-                encryptedConst += "6";
+                encryptedStr += "6";
                 break;
             case "f":
-                encryptedConst += "7";
+                encryptedStr += "7";
                 break;
             case "g":
-                encryptedConst += "8";
+                encryptedStr += "8";
                 break;
             case "h":
-                encryptedConst += "9";
+                encryptedStr += "9";
                 break;
             case "i":
-                encryptedConst += "10";
+                encryptedStr += "10";
                 break;
             case "j": 
-                encryptedConst += "11";
+                encryptedStr += "11";
                 break;
             case "k":
-                encryptedConst += "12";
+                encryptedStr += "12";
                 break;
             case "l":
-                encryptedConst += "13";
+                encryptedStr += "13";
                 break;
             case "m":
-                encryptedConst += "14";
+                encryptedStr += "14";
                 break;
             case "n":
-                encryptedConst += "15";
+                encryptedStr += "15";
                 break;
             case "o":
-                encryptedConst += "16";
+                encryptedStr += "16";
                 break;
             case "p":
-                encryptedConst += "17";
+                encryptedStr += "17";
                 break;
             case "q":
-                encryptedConst += "18";
+                encryptedStr += "18";
                 break;
             case "r":
-                encryptedConst += "19";
+                encryptedStr += "19";
                 break;
             case "s":
-                encryptedConst += "20";
+                encryptedStr += "20";
                 break;
             case "t":
-                encryptedConst += "21";
+                encryptedStr += "21";
                 break;
             case "u":
-                encryptedConst += "22";
+                encryptedStr += "22";
                 break;
             case "v":
-                encryptedConst += "23";
+                encryptedStr += "23";
                 break;
             case "w":
-                encryptedConst += "24";
+                encryptedStr += "24";
                 break;
             case "x":
-                encryptedConst += "25";
+                encryptedStr += "25";
                 break;
             case "y":
-                encryptedConst += "26";
+                encryptedStr += "26";
                 break;
             case "z":
-                encryptedConst += "27";
+                encryptedStr += "27";
                 break;
             case "A":
-                encryptedConst += "28";
+                encryptedStr += "28";
                 break;
             case "B": 
-                encryptedConst += "29";
+                encryptedStr += "29";
                 break;
             case "C":
-                encryptedConst += "30";
+                encryptedStr += "30";
                 break;
             case "D": 
-                encryptedConst += "31";
+                encryptedStr += "31";
                 break;
             case "E": 
-                encryptedConst += "32";
+                encryptedStr += "32";
                 break;
             case "F":
-                encryptedConst += "33";
+                encryptedStr += "33";
                 break;
             case "G":
-                encryptedConst += "34";
+                encryptedStr += "34";
                 break;
             case "H": 
-                encryptedConst += "35";
+                encryptedStr += "35";
                 break;
             case "I":
-                encryptedConst += "36";
+                encryptedStr += "36";
                 break;
             case "J":
-                encryptedConst += "37";
+                encryptedStr += "37";
                 break;
             case "K":
-                encryptedConst += "38";
+                encryptedStr += "38";
                 break;
             case "L":
-                encryptedConst += "39";
+                encryptedStr += "39";
                 break;
             case "M":
-                encryptedConst += "40";
+                encryptedStr += "40";
                 break;
             case "N":
-                encryptedConst += "41";
+                encryptedStr += "41";
                 break;
             case "O":
-                encryptedConst += "42";
+                encryptedStr += "42";
                 break;
             case "P":
-                encryptedConst += "43";
+                encryptedStr += "43";
                 break;
             case "Q":
-                encryptedConst += "44";
+                encryptedStr += "44";
                 break;
             case "R":
-                encryptedConst += "45";
+                encryptedStr += "45";
                 break;
             case "S":
-                encryptedConst += "46";
+                encryptedStr += "46";
                 break;
             case "T":
-                encryptedConst += "47";
+                encryptedStr += "47";
                 break;
             case "U":
-                encryptedConst += "48";
+                encryptedStr += "48";
                 break;
             case "V":
-                encryptedConst += "49";
+                encryptedStr += "49";
                 break;
             case "W":
-                encryptedConst += "50";
+                encryptedStr += "50";
                 break;
             case "X":
-                encryptedConst += "51";
+                encryptedStr += "51";
                 break;
             case "Y":
-                encryptedConst += "52";
+                encryptedStr += "52";
                 break;
             case "Z":
-                encryptedConst += "53";
+                encryptedStr += "53";
                 break;
             case "!":
-                encryptedConst += "54";
+                encryptedStr += "54";
                 break;
             case "@":
-                encryptedConst += "55";
+                encryptedStr += "55";
                 break;
             case "£":
-                encryptedConst += "56";
+                encryptedStr += "56";
                 break;
             case "$":
-                encryptedConst += "57";
+                encryptedStr += "57";
                 break;
             case "%":
-                encryptedConst += "58";
+                encryptedStr += "58";
                 break;
             case "^":
-                encryptedConst += "59";
+                encryptedStr += "59";
                 break;
             case "&":
-                encryptedConst += "60";
+                encryptedStr += "60";
                 break;
             case "*":
-                encryptedConst += "61";
+                encryptedStr += "61";
                 break;
             case "(":
-                encryptedConst += "62";
+                encryptedStr += "62";
                 break;
             case ")":
-                encryptedConst += "63";
+                encryptedStr += "63";
                 break;
             case "-":
-                encryptedConst += "64";
+                encryptedStr += "64";
                 break;
             case "_":
-                encryptedConst += "65";
+                encryptedStr += "65";
                 break;
             case "=":
-                encryptedConst += "66";
+                encryptedStr += "66";
                 break;
             case "+":
-                encryptedConst += "67";
+                encryptedStr += "67";
                 break;
             case "[":
-                encryptedConst += "68";
+                encryptedStr += "68";
                 break;
             case "]":
-                encryptedConst += "69";
+                encryptedStr += "69";
                 break;
             case "{":
-                encryptedConst += "70";
+                encryptedStr += "70";
                 break;
             case "}":
-                encryptedConst += "71";
+                encryptedStr += "71";
                 break;
             case ";":
-                encryptedConst += "72";
+                encryptedStr += "72";
                 break;
             case ":":
-                encryptedConst += "73";
+                encryptedStr += "73";
                 break;
             case "'":
-                encryptedConst += "74";
+                encryptedStr += "74";
                 break;
             case "\"":
-                encryptedConst += "75";
+                encryptedStr += "75";
                 break;
             case "\\":
-                encryptedConst += "76";
+                encryptedStr += "76";
                 break;
             case "|":
-                encryptedConst += "77";
+                encryptedStr += "77";
                 break;
             case ",":
-                encryptedConst += "78";
+                encryptedStr += "78";
                 break;
             case ".":
-                encryptedConst += "79";
+                encryptedStr += "79";
                 break;
             case "<":
-                encryptedConst += "80";
+                encryptedStr += "80";
                 break;
             case ">":
-                encryptedConst += "81";
+                encryptedStr += "81";
                 break;
             case "/":
-                encryptedConst += "82";
+                encryptedStr += "82";
                 break;
             case "?":
-                encryptedConst += "83";
+                encryptedStr += "83";
                 break;
             case "\`":
-                encryptedConst += "84";
+                encryptedStr += "84";
                 break;
             case "~":
-                encryptedConst += "85";
+                encryptedStr += "85";
                 break;
             case "§":
-                encryptedConst += "86";
+                encryptedStr += "86";
                 break;
             case "±":
-                encryptedConst += "87";
+                encryptedStr += "87";
                 break;
             case "1":
-                encryptedConst += "88";
+                encryptedStr += "88";
                 break;
             case "2":
-                encryptedConst += "89";
+                encryptedStr += "89";
                 break;
             case "3":
-                encryptedConst += "90";
+                encryptedStr += "90";
                 break;
             case "4":
                 
-            break;encryptedConst += "91";
+            break;encryptedStr += "91";
             case "5":
-                encryptedConst += "92";
+                encryptedStr += "92";
                 break;
             case "6":
-                encryptedConst += "93";
+                encryptedStr += "93";
                 break;
             case "7":
-                encryptedConst += "94";
+                encryptedStr += "94";
                 break;
             case "8":
-                encryptedConst += "95";
+                encryptedStr += "95";
                 break;
             case "9":
-                encryptedConst += "96";
+                encryptedStr += "96";
                 break;
             case "0":
-                encryptedConst += "97"
+                encryptedStr += "97"
                 break;
 
         }       
     }
 
-    return encryptedConst;
+    return encryptedStr;
 }
 
 console.log(encrypt("Hi, Ed!"));
