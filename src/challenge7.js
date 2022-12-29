@@ -1,620 +1,372 @@
 class LetterNumber {
     
-    encrypt(plainTxt) { 
+    encrypt(plainTxt, cipherInt) { 
 
-        let encryptedStr = "";
+        let encryptedStr = ""; // String holds the ciphertext
         
-        encryptedStr = characterSet(plainTxt, encryptedStr);
-
-        /*for(var i = 0; i <= plainTxt.length; i++){
-            switch(plainTxt.charAt(i)){
-                case " ":
-                    encryptedStr += "1";
-                    break;
-                case "a":
-                    encryptedStr += "2";
-                    break;
-                case "b":
-                    encryptedStr += "3";
-                    break;
-                case "c":
-                    encryptedStr += "4";
-                    break;
-                case "d":
-                    encryptedStr += "5";
-                    break;
-                case "e":
-                    encryptedStr += "6";
-                    break;
-                case "f":
-                    encryptedStr += "7";
-                    break;
-                case "g":
-                    encryptedStr += "8";
-                    break;
-                case "h":
-                    encryptedStr += "9";
-                    break;
-                case "i":
-                    encryptedStr += "10";
-                    break;
-                case "j": 
-                    encryptedStr += "11";
-                    break;
-                case "k":
-                    encryptedStr += "12";
-                    break;
-                case "l":
-                    encryptedStr += "13";
-                    break;
-                case "m":
-                    encryptedStr += "14";
-                    break;
-                case "n":
-                    encryptedStr += "15";
-                    break;
-                case "o":
-                    encryptedStr += "16";
-                    break;
-                case "p":
-                    encryptedStr += "17";
-                    break;
-                case "q":
-                    encryptedStr += "18";
-                    break;
-                case "r":
-                    encryptedStr += "19";
-                    break;
-                case "s":
-                    encryptedStr += "20";
-                    break;
-                case "t":
-                    encryptedStr += "21";
-                    break;
-                case "u":
-                    encryptedStr += "22";
-                    break;
-                case "v":
-                    encryptedStr += "23";
-                    break;
-                case "w":
-                    encryptedStr += "24";
-                    break;
-                case "x":
-                    encryptedStr += "25";
-                    break;
-                case "y":
-                    encryptedStr += "26";
-                    break;
-                case "z":
-                    encryptedStr += "27";
-                    break;
-                case "A":
-                    encryptedStr += "28";
-                    break;
-                case "B": 
-                    encryptedStr += "29";
-                    break;
-                case "C":
-                    encryptedStr += "30";
-                    break;
-                case "D": 
-                    encryptedStr += "31";
-                    break;
-                case "E": 
-                    encryptedStr += "32";
-                    break;
-                case "F":
-                    encryptedStr += "33";
-                    break;
-                case "G":
-                    encryptedStr += "34";
-                    break;
-                case "H": 
-                    encryptedStr += "35";
-                    break;
-                case "I":
-                    encryptedStr += "36";
-                    break;
-                case "J":
-                    encryptedStr += "37";
-                    break;
-                case "K":
-                    encryptedStr += "38";
-                    break;
-                case "L":
-                    encryptedStr += "39";
-                    break;
-                case "M":
-                    encryptedStr += "40";
-                    break;
-                case "N":
-                    encryptedStr += "41";
-                    break;
-                case "O":
-                    encryptedStr += "42";
-                    break;
-                case "P":
-                    encryptedStr += "43";
-                    break;
-                case "Q":
-                    encryptedStr += "44";
-                    break;
-                case "R":
-                    encryptedStr += "45";
-                    break;
-                case "S":
-                    encryptedStr += "46";
-                    break;
-                case "T":
-                    encryptedStr += "47";
-                    break;
-                case "U":
-                    encryptedStr += "48";
-                    break;
-                case "V":
-                    encryptedStr += "49";
-                    break;
-                case "W":
-                    encryptedStr += "50";
-                    break;
-                case "X":
-                    encryptedStr += "51";
-                    break;
-                case "Y":
-                    encryptedStr += "52";
-                    break;
-                case "Z":
-                    encryptedStr += "53";
-                    break;
-                case "!":
-                    encryptedStr += "54";
-                    break;
-                case "@":
-                    encryptedStr += "55";
-                    break;
-                case "£":
-                    encryptedStr += "56";
-                    break;
-                case "$":
-                    encryptedStr += "57";
-                    break;
-                case "%":
-                    encryptedStr += "58";
-                    break;
-                case "^":
-                    encryptedStr += "59";
-                    break;
-                case "&":
-                    encryptedStr += "60";
-                    break;
-                case "*":
-                    encryptedStr += "61";
-                    break;
-                case "(":
-                    encryptedStr += "62";
-                    break;
-                case ")":
-                    encryptedStr += "63";
-                    break;
-                case "-":
-                    encryptedStr += "64";
-                    break;
-                case "_":
-                    encryptedStr += "65";
-                    break;
-                case "=":
-                    encryptedStr += "66";
-                    break;
-                case "+":
-                    encryptedStr += "67";
-                    break;
-                case "[":
-                    encryptedStr += "68";
-                    break;
-                case "]":
-                    encryptedStr += "69";
-                    break;
-                case "{":
-                    encryptedStr += "70";
-                    break;
-                case "}":
-                    encryptedStr += "71";
-                    break;
-                case ";":
-                    encryptedStr += "72";
-                    break;
-                case ":":
-                    encryptedStr += "73";
-                    break;
-                case "'":
-                    encryptedStr += "74";
-                    break;
-                case "\"":
-                    encryptedStr += "75";
-                    break;
-                case "\\":
-                    encryptedStr += "76";
-                    break;
-                case "|":
-                    encryptedStr += "77";
-                    break;
-                case ",":
-                    encryptedStr += "78";
-                    break;
-                case ".":
-                    encryptedStr += "79";
-                    break;
-                case "<":
-                    encryptedStr += "80";
-                    break;
-                case ">":
-                    encryptedStr += "81";
-                    break;
-                case "/":
-                    encryptedStr += "82";
-                    break;
-                case "?":
-                    encryptedStr += "83";
-                    break;
-                case "\`":
-                    encryptedStr += "84";
-                    break;
-                case "~":
-                    encryptedStr += "85";
-                    break;
-                case "§":
-                    encryptedStr += "86";
-                    break;
-                case "±":
-                    encryptedStr += "87";
-                    break;
-                case "1":
-                    encryptedStr += "88";
-                    break;
-                case "2":
-                    encryptedStr += "89";
-                    break;
-                case "3":
-                    encryptedStr += "90";
-                    break;
-                case "4":
-                    
-                break;encryptedStr += "91";
-                case "5":
-                    encryptedStr += "92";
-                    break;
-                case "6":
-                    encryptedStr += "93";
-                    break;
-                case "7":
-                    encryptedStr += "94";
-                    break;
-                case "8":
-                    encryptedStr += "95";
-                    break;
-                case "9":
-                    encryptedStr += "96";
-                    break;
-                case "0":
-                    encryptedStr += "97"
-                    break;
-
-            }       
-        }*/
-
-        return encryptedStr;
-    }
-
-    
+        return encryptedStr = characterSet(plainTxt, cipherInt, encryptedStr);
+    }   
 }
 
-function characterSet(plainTxt, encryptedStr) {
+/**
+ * Checks for the value of the characters, add leading zeros when needed,
+ * and concatenate the different values for the final ciphertext
+ * @param {*} plainTxt 
+ * @param {*} cipherInt 
+ * @returns encryptedStr
+ */
+function characterSet(plainTxt, cipherInt, encryptedStr) {
     
-    for(var i = 0; i <= plainTxt.length; i++){
+    let num = 0; //Holds the value of the each character
+
+    //Loops through each charachter of the String passed
+    for(var i = 0; i < plainTxt.length; i++){
+        //Menu to assign values to each character
         switch(plainTxt.charAt(i)){
             case " ":
-                encryptedStr += "1";
+                num = 1;
                 break;
             case "a":
-                encryptedStr += "2";
+                num = 2;
                 break;
             case "b":
-                encryptedStr += "3";
+                num = 3;
                 break;
             case "c":
-                encryptedStr += "4";
+                num = 4;
                 break;
             case "d":
-                encryptedStr += "5";
+                num = 5;
                 break;
             case "e":
-                encryptedStr += "6";
+                num = 6;
                 break;
             case "f":
-                encryptedStr += "7";
+                num = 7;
                 break;
             case "g":
-                encryptedStr += "8";
+                num = 8;
                 break;
             case "h":
-                encryptedStr += "9";
+                num = 9;
                 break;
             case "i":
-                encryptedStr += "10";
+                num = 10;
                 break;
             case "j": 
-                encryptedStr += "11";
+                num = 11;
                 break;
             case "k":
-                encryptedStr += "12";
+                num = 12;
                 break;
             case "l":
-                encryptedStr += "13";
+                num = 13;
                 break;
             case "m":
-                encryptedStr += "14";
+                num = 14;
                 break;
             case "n":
-                encryptedStr += "15";
+                num = 15;
                 break;
             case "o":
-                encryptedStr += "16";
+                num = 16;
                 break;
             case "p":
-                encryptedStr += "17";
+                num = 17;
                 break;
             case "q":
-                encryptedStr += "18";
+                num = 18;
                 break;
             case "r":
-                encryptedStr += "19";
+                num = 19;
                 break;
             case "s":
-                encryptedStr += "20";
+                num = 20;
                 break;
             case "t":
-                encryptedStr += "21";
+                num = 21;
                 break;
             case "u":
-                encryptedStr += "22";
+                num = 22;
                 break;
             case "v":
-                encryptedStr += "23";
+                num = 23;
                 break;
             case "w":
-                encryptedStr += "24";
+                num = 24;
                 break;
             case "x":
-                encryptedStr += "25";
+                num = 25;
                 break;
             case "y":
-                encryptedStr += "26";
+                num = 26;
                 break;
             case "z":
-                encryptedStr += "27";
+                num = 27;
                 break;
             case "A":
-                encryptedStr += "28";
+                num = 28;
                 break;
             case "B": 
-                encryptedStr += "29";
+                num = 29;
                 break;
             case "C":
-                encryptedStr += "30";
+                num = 30;
                 break;
             case "D": 
-                encryptedStr += "31";
+                num = 31;
                 break;
             case "E": 
-                encryptedStr += "32";
+                num = 32;
                 break;
             case "F":
-                encryptedStr += "33";
+                num = 33;
                 break;
             case "G":
-                encryptedStr += "34";
+                num = 34;
                 break;
             case "H": 
-                encryptedStr += "35";
+                num = 35;
                 break;
             case "I":
-                encryptedStr += "36";
+                num = 36;
                 break;
             case "J":
-                encryptedStr += "37";
+                num = 37;
                 break;
             case "K":
-                encryptedStr += "38";
+                num = 38;
                 break;
             case "L":
-                encryptedStr += "39";
+                num = 39;
                 break;
             case "M":
-                encryptedStr += "40";
+                num = 40;
                 break;
             case "N":
-                encryptedStr += "41";
+                num = 41;
                 break;
             case "O":
-                encryptedStr += "42";
+                num = 42;
                 break;
             case "P":
-                encryptedStr += "43";
+                num = 43;
                 break;
             case "Q":
-                encryptedStr += "44";
+                num = 44;
                 break;
             case "R":
-                encryptedStr += "45";
+                num = 45;
                 break;
             case "S":
-                encryptedStr += "46";
+                num = 46;
                 break;
             case "T":
-                encryptedStr += "47";
+                num = 47;
                 break;
             case "U":
-                encryptedStr += "48";
+                num = 48;
                 break;
             case "V":
-                encryptedStr += "49";
+                num = 49;
                 break;
             case "W":
-                encryptedStr += "50";
+                num = 50;
                 break;
             case "X":
-                encryptedStr += "51";
+                num = 51;
                 break;
             case "Y":
-                encryptedStr += "52";
+                num = 52;
                 break;
             case "Z":
-                encryptedStr += "53";
+                num = 53;
                 break;
             case "!":
-                encryptedStr += "54";
+                num = 54;
                 break;
             case "@":
-                encryptedStr += "55";
+                num = 55;
                 break;
             case "£":
-                encryptedStr += "56";
+                num = 56;
                 break;
             case "$":
-                encryptedStr += "57";
+                num = 57;
                 break;
             case "%":
-                encryptedStr += "58";
+                num = 58;
                 break;
             case "^":
-                encryptedStr += "59";
+                num = 59;
                 break;
             case "&":
-                encryptedStr += "60";
+                num = 60;
                 break;
             case "*":
-                encryptedStr += "61";
+                num = 61;
                 break;
             case "(":
-                encryptedStr += "62";
+                num = 62;
                 break;
             case ")":
-                encryptedStr += "63";
+                num = 63;
                 break;
             case "-":
-                encryptedStr += "64";
+                num = 64;
                 break;
             case "_":
-                encryptedStr += "65";
+                num = 65;
                 break;
             case "=":
-                encryptedStr += "66";
+                num = 66;
                 break;
             case "+":
-                encryptedStr += "67";
+                num = 67;
                 break;
             case "[":
-                encryptedStr += "68";
+                num = 68;
                 break;
             case "]":
-                encryptedStr += "69";
+                num = 69;
                 break;
             case "{":
-                encryptedStr += "70";
+                num = 70;
                 break;
             case "}":
-                encryptedStr += "71";
+                num = 71;
                 break;
             case ";":
-                encryptedStr += "72";
+                num = 72;
                 break;
             case ":":
-                encryptedStr += "73";
+                num = 73;
                 break;
             case "'":
-                encryptedStr += "74";
+                num = 74;
                 break;
             case "\"":
-                encryptedStr += "75";
+                num = 75;
                 break;
             case "\\":
-                encryptedStr += "76";
+                num = 76;
                 break;
             case "|":
-                encryptedStr += "77";
+                num = 77;
                 break;
             case ",":
-                encryptedStr += "78";
+                num = 78;
                 break;
             case ".":
-                encryptedStr += "79";
+                num = 79;
                 break;
             case "<":
-                encryptedStr += "80";
+                num = 80;
                 break;
             case ">":
-                encryptedStr += "81";
+                num = 81;
                 break;
             case "/":
-                encryptedStr += "82";
+                num = 82;
                 break;
             case "?":
-                encryptedStr += "83";
+                num = 83;
                 break;
             case "\`":
-                encryptedStr += "84";
+                num = 84;
                 break;
             case "~":
-                encryptedStr += "85";
+                num = 85;
                 break;
             case "§":
-                encryptedStr += "86";
+                num = 86;
                 break;
             case "±":
-                encryptedStr += "87";
+                num = 87;
                 break;
             case "1":
-                encryptedStr += "88";
+                num = 88;
                 break;
             case "2":
-                encryptedStr += "89";
+                num = 89;
                 break;
             case "3":
-                encryptedStr += "90";
+                num = 90;
                 break;
             case "4":
-                
-            break;encryptedStr += "91";
+                num = 91;
+                break;
             case "5":
-                encryptedStr += "92";
+                num = 92;
                 break;
             case "6":
-                encryptedStr += "93";
+                num = 93;
                 break;
             case "7":
-                encryptedStr += "94";
+                num = 94;
                 break;
             case "8":
-                encryptedStr += "95";
+                num = 95;
                 break;
             case "9":
-                encryptedStr += "96";
+                num = 96;
                 break;
             case "0":
-                encryptedStr += "97"
+                num = 97
                 break;
 
         }       
-    }
+    
+        num += cipherInt; //Sums the cipher value
 
+        //Holds the cipher value of the character and calls reset function to keep the value under 100
+        let encryptedInt = reset(num);
+
+        //Holds the cipher value of the character as a String and calls the function to add 
+        //a leading zero(if needed)
+        encryptedChar = addLeadingZeros(encryptedInt, 2);
+        
+        //Holds the final cipher text concatenating the values of each character of the original string
+        encryptedStr += encryptedChar;        
+    }
+   
     return encryptedStr;
 }
 
-function cipherStr(plainTxt, encryptedStr, cipherInt) {
+/**
+ * Checks if a leading zero if needed and parse the interger to a string
+ * @param {*} num 
+ * @param {*} totalLength 
+ * @returns num as a string
+ */
+function addLeadingZeros(num, totalLength) {
 
-    
+    if(num < 10){
+
+        let cipherNum = String(num).padStart(totalLength, '0');
+        return cipherNum;
+    }
+    else{
+        return String(num);
+    }
+  }
+
+  /**
+   * 
+   * @param {*} num 
+   * @returns num with a value under 100
+   */
+function reset(num) {
+
+    while(num > 99){
+
+        num -= 100;
+    }
+
+    return num;
 }
 
 let letterNumber = new LetterNumber();
-console.log(letterNumber.encrypt("a"));
+console.log(letterNumber.encrypt("a", 1)) // "03"
+console.log(letterNumber.encrypt("Ed", 4)) // "3609"
+console.log(letterNumber.encrypt("Hi, Ed!", 302)) // "37128003340756"
