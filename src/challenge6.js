@@ -303,3 +303,4 @@ const encrypt = (str) => {
 }
 
 console.log(encrypt("Hi, Ed!"));
+console.log(encrypt("Hi, Fran!"));
