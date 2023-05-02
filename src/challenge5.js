@@ -21,6 +21,6 @@ class Student {
     }
 }
 
-let student = new Student("asia");
-console.log(student.capitalisedName());
-console.log(student.name);
+//let student = new Student("asia");
+//console.log(student.capitalisedName());
+//console.log(student.name);
