@@ -27,7 +27,7 @@ function main() {
 
 main();
 ```
-In Javascript this means we can use functions as arguments to functions (like `callbackFn` in the `call` function), we can return functions from other functions (like `apply_twice` does with an arrow function), we can define functions wherever we want to (in particular inside of other functions, like in (`apply_twice`)) and we can construct new functions at run time (notice how `apply_twice` doesn't know anything about the function `square` when it is called to instantiate `fourth_power` in `main`).
+In Javascript this means we can use functions as arguments to functions (like `callbackFn` in the `call` function), we can return functions from other functions (like `apply_twice` does with an arrow function), we can define functions wherever we want to (in particular inside of other functions, like in (`apply_twice`)) and we can construct new functions at run time (notice how `apply_twice` doesn't know anything about the function `square` when it is called to set `fourth_power` in `main`).
 
 When a function is declared an identifier is defined and memory is set aside for its code. This code is prepared for later execution but isn't run yet. When the function is invoked the (preprocesed) contents are excecuted, work is done and a possible return value is substituted in where the function was called.
 
