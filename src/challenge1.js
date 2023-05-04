@@ -3,3 +3,7 @@
 function greet() {
   return "Hi, Ed!";
 }
+
+module.exports = {
+  greet
+}
