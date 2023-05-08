@@ -1,0 +1,11 @@
+- what `First Class` functions are
+
+First class functions are functions that can be stored as a value, such as in a variable or array. They are treated the same way that other variables are treated. For example, they can be used as an argument to another function, and can be returned by another function.
+
+- how this concept applies in JS.
+
+In JavaScript, all functions are first class functions and can be used as above. 
+
+- what the difference is between declaring a function and calling it
+
+Declaring a function involves writing the code that will be implemented to complete a desired process. Declaring the function does not run this code or carry out the process, but stores the process for later use. To use the function, it is 'called'. Calling a function instigates the code inside the function to run, at the point of calling. 
