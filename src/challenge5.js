@@ -10,5 +10,4 @@ class Student {
 }
 
 let student = new Student("asia")
-student.capitalisedName()
 console.log(student.capitalisedName())

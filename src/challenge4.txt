@@ -4,4 +4,26 @@ In a markdown or text file called `challenge4.md` or `challenge4.txt`, write an 
 - what the difference is between declaring a function and calling it
 - Bonus: give examples for each explanation
 
-1. First Class functions are 
+
+
+First Class functions are functions that can be assigned to a variable, passed as an argument to another function or can be returned as a value from a function.
+
+Declaring a function structures what it will execute, creating a reuseable block of code. Calling a function means executing the specific block of code that was declared when the function was made.
+
+Example: 
+
+//declaring the function multiplyBy
+function multiplyBy(factor) {
+    return function(num) {       
+        return num * factor;
+    }
+}
+
+const double = multiplyBy(2);
+
+// calling the function
+console.log(double(6)); // returns 12
+
+
+
+

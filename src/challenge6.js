@@ -3,11 +3,13 @@
 // Use your best judgment with your pair partner. If you want clarification, ask your coach.
 
 const tableOfValues = {
+    "H": 35,
+    "i": 10,
+    ",": 78,
     " ": 1,
-    "a": 2,
-    "b": 3,
-    "c": 4,
+    "E": 32,
     "d": 5,
+    "!": 54
     // etc
 };
 
