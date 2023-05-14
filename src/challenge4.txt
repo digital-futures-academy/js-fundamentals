@@ -1,0 +1,34 @@
+1) What are First Class Functions?
+    First Class functions are functions that act like any other object in the sense that they are able to act as arguments to other functions, they can be the returning value of other functions and also be assigned as a value to a variable.
+
+2) How can this concept be applied in JS?
+    In JS, a function can be assigned to a variable and that variable can be used to invoke the function.
+
+3) What is the difference betwwen declaring a function and calling it?
+    Declaring a function means to write all the code describing what the function does without using it while calling a function means to actually use the function for its intended purpose thereby telling the computer to run the code in the function.
+
+- Give examples for each explanation.
+1)  // Create greet function
+    function greet(){
+        console.log("Hello World!")
+    }
+    // Assign function to a variable
+    let text = greet;
+    // Create greeting function that takes a function as an argument and returns the function
+    function greeting(helloWorld){
+        return helloWorld();
+    }
+    // Invoke greeting function
+    greeting(text());
+
+2)  // Assign a function to a variable
+    let text = () => console.log("What a wonderful day!");
+    // Invoke function through variable
+    text();
+
+3)  // Declare a function
+    function add(a, b) {
+        console.log(a + b);
+    }
+    // Call a function
+    add(2, 8);
