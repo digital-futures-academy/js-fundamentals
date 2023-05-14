@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/digital-futures-academy/js-fundamentals/issues"
   },
-  "homepage": "https://github.com/digital-futures-academy/js-fundamentals#readme"
+  "homepage": "https://github.com/digital-futures-academy/js-fundamentals#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "jsdom": "^22.0.0",
+    "node-fetch": "^3.3.1"
+  }
 }
