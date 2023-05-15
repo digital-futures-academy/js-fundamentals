@@ -5,14 +5,14 @@ class LetterNumber {
     this.substitutionDict = substitutionDict;
   }
 
-  encrypt(string, number) {
+  encrypt(string, key) {
     let encrypted_string = '';
-    let characters = string.split('');
+    const characters = string.split('');
 
     characters.forEach(character => {
-      const int_encripted_value = parseInt(this.substitutionDict[character])
-      const number_to_add = number % 100
-      const new_encripted_value = (int_encripted_value + number_to_add) % 100
+      const int_encripted_value = parseInt(this.substitutionDict[character]);
+      const number_to_add = key % 100;
+      const new_encripted_value = (int_encripted_value + number_to_add) % 100;
 
       if (this.isSingleDigit(new_encripted_value)) {
         encrypted_string += `0${new_encripted_value}`;
