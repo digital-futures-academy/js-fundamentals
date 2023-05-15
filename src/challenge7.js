@@ -6,7 +6,7 @@ class LetterNumber {
   }
 
   encrypt(string, number) {
-    let encripted_string = '';
+    let encrypted_string = '';
     let characters = string.split('');
 
     characters.forEach(character => {
@@ -15,13 +15,13 @@ class LetterNumber {
       const new_encripted_value = (int_encripted_value + number_to_add) % 100
 
       if (this.isSingleDigit(new_encripted_value)) {
-        encripted_string += `0${new_encripted_value}`;
+        encrypted_string += `0${new_encripted_value}`;
       } else {
-        encripted_string += `${new_encripted_value}`;
+        encrypted_string += `${new_encripted_value}`;
       }
     });
 
-    return encripted_string;
+    return encrypted_string;
   }
 
   isSingleDigit(number) {
