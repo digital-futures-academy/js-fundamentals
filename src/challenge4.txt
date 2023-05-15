@@ -1,0 +1,21 @@
+1. A first class function is a feature of a programming language where a function can be used in the same way as any other variable.
+   It can be assigned values, used as paramaters in other functions and can be used as a return value.
+   Example: In C++ a function cannot be used as anything other than a method to do something where as in Javascript a function can be 
+	    the method, the arguement and the return value simultaneously.
+
+2. As mentioned in the example above, a Javascript function can be used interchangeably with other variables making its functions first class.
+   Example: 
+    //Declare our function
+    function numberSum(num1, num2)
+	{
+		return num1 + num2;
+	}
+
+    //After the function has been declared we can assign it to a variable
+    let add = numberSum(5,10);
+
+    //This same logic apply for passing the function as a parameter or a return value.
+
+3. Declaring a function is the act of programming what the function will do, using numberSum from above we can see that we specify what we want
+   our function to do. This is an example of a declaration. Calling a function happens when we need to use the function we have declared ie the 
+   let add = numberSum(5,10) we used before. This line calls the function with our provided parameters and assigns add to the sum value.
