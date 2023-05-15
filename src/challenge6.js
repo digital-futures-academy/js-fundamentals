@@ -3,8 +3,8 @@
 const substitutionDictLoader = require("./substitutionDictLoader");
 
 function encript(string, substitutionDict) {
-    encripted_string = '';
-    characters = string.split('');
+    let encripted_string = '';
+    let characters = string.split('');
     characters.forEach(character => {
         encripted_string += substitutionDict[character];
     });
