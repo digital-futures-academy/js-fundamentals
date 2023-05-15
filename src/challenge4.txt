@@ -1,0 +1,15 @@
+- first class functions are functions in a programming language that can be used as arguments for other functions, values from other functions (returned by other functions), or used as a value of a variable.
+
+in JS, we use functions inside other functions  (arguments), we can call them from within other functions
+
+declaring a function means you build up the functions, tell it what it can do, and with what data / arguments it can do that. Calling a function means you execute it / make it do it's thing, while handing it the data it needs to function.
+
+example of declaring a function :
+
+function greet(name) {
+    return `Hi, ${name}!`;
+};
+
+example of how to call this function :
+
+console.log(greet('Peter Pan'));
