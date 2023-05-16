@@ -102,14 +102,14 @@ const csvToObject = (string) => {
     return character;
   }); 
 
-  const object = characterssArray.reduce((acc, currVal) =>{
+  const characterSet = characterssArray.reduce((acc, currVal) =>{
     return {
       ...acc, 
       [currVal[0]] : currVal[1],
       };
     }, {}
   );
-  return object;
+  return characterSet;
 }
 
 const encrypt = (stringToEncrypt, characterSetRaw) => {
@@ -128,3 +128,4 @@ const encrypt = (stringToEncrypt, characterSetRaw) => {
 
 console.log("Char key map:", csvToObject(characterSetRaw));
 console.log("Key map values for 'Hi, Ed!':", encrypt('Hi, Ed!',characterSetRaw ));
+console.log("Key map values for 'Ed':", encrypt('Ed',characterSetRaw ))
