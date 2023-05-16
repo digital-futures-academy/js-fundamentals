@@ -111,3 +111,20 @@ const csvToObject = (string) => {
   );
   return object;
 }
+
+const encrypt = (stringToEncrypt, characterSetRaw) => {
+  const charsArr = stringToEncrypt.split('');
+  let newString = '';
+  const characterSet = csvToObject(characterSetRaw);
+  for (let i = 0; i < charsArr.length; i++) {
+    for (let char in characterSet) {
+        if (charsArr[i] === char) {
+          newString += characterSet[char];
+        }
+    }
+  }
+  return newString;
+}
+
+console.log("Char key map:", csvToObject(characterSetRaw));
+console.log("Key map values for 'Hi, Ed!':", encrypt('Hi, Ed!',characterSetRaw ));
