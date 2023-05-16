@@ -17,7 +17,6 @@ myFile.on("line", (line) => {
     console.log(myDict);
 });
 
-
 function encryptString(string) {
     let encryptedNumber = "";
     for (let i = 0; i < string.length; i++){
