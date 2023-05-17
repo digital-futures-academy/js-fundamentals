@@ -1,2 +1,4 @@
-// Using the function keyword declare a function called `greet`
-// that returns a String "Hi, Ed!"
+//Challenge 1
+function greet() {
+    return "Hi, Ed!";
+}
