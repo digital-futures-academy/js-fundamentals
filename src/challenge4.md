@@ -5,8 +5,7 @@ It is just another datatype that can be used.
 JS has access to first class functions, so you can have
 ```const greet = (name) => { return `Hi, ${name}`; };```
 from challenge 3 can be passed through another function such as
-```let nameList = ["Jim","Kate","Max"];
-let hiNames = nameList.map(greet);```
+```let nameList = ["Jim","Kate","Max"]; let hiNames = nameList.map(greet);```
 will make a new array with "Hi, name!" for each name.
 A function was taken as an input to another function.
 
