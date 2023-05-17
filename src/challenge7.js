@@ -39,10 +39,9 @@ class LetterNumber {
   resetFromZero(value) {
     let stringValue = value.toString()
     if(stringValue.length > 2) {
-      stringValue = "1" + stringValue.slice(-2)
+      stringValue = stringValue.slice(-2)
     }
-    const newValue = parseInt(stringValue) - 100;
-    return newValue 
+    return parseInt(stringValue); 
   }
 
   encrypt(stringToEncrypt, offset) {
