@@ -1,0 +1,27 @@
+A "first class" function is a feature in programming languages where functions are treated as variables. They can be assigned to variables, passed as arguments to other functions, and returned as values from functions. 
+
+JavaScript makes use of first class funtions.
+e.g.
+Take the function made in challenge 3: 
+const greet = (name) => {
+    return `Hi, ${name}!`;
+}
+
+This function can then be used as a variable. We can then use this function in combination with other functions and pass it as a parameter.
+
+function you(greeting, name) {
+    return greeting(name);
+}
+
+console.log(you(greet, "Neeko")); # Output: Hello Neeko!
+
+
+
+Declaring a function is where you create the method of a function and declare the input parameters and the output. Calling it is where you run said function with your chosen parameters to get an output. 
+i.e.
+Declaring:
+function greet(name) {
+    return `Hi, ${name}!`;
+}
+Calling:
+greet("Skadi")
