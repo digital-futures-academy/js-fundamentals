@@ -1,0 +1,47 @@
+A language has 'First Class' functions if a function can be treated the same as other variables.
+
+For instance, in JavaScript, a function can be:
+- assigned as a value to a variable
+- passed as an argument to other functions
+- returned by another function
+
+A function assigned to a variable:
+
+const foo = () => {
+  console.log("foobar");
+};
+
+A function passed as an argument to another function:
+
+function sayHello() {
+  return "Hello, ";
+}
+function greeting(helloMessage, name) {
+  console.log(helloMessage() + name);
+}
+// Pass `sayHello` as an argument to `greeting` function
+greeting(sayHello, "JavaScript!");
+// Hello, JavaScript!
+
+Returning a function from another function:
+
+function sayHello() {
+  return () => {
+    console.log("Hello!");
+  };
+}
+
+(Examples from https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
+
+Declaring a function is when you create the function.
+Calling a function is making a function run that you've already created.
+
+Declaring a function:
+
+const sayHello = (name) => {
+    console.log(`Hi, ${name}!`)
+}
+
+Calling a function:
+
+sayHello('Dave')
