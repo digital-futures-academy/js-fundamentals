@@ -19,3 +19,5 @@ letterNumber.encrypt("Hi, Ed!", 302) // "37128003340756"
 
 _*Shout out to AydanAwan from mse-2103-a who spotted an off-by-one bug in the original version of this
 challenge!_
+
+
