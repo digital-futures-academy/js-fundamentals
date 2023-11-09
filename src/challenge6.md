@@ -8,3 +8,8 @@ I want to be able to encrypt a string using letter-number substitution according
 ```
 
 Use your best judgment with your pair partner. If you want clarification, ask your coach.
+
+function encryptString(input) {
+  const encryptedArray = Array.from(input).map(char => substitutionTable[char] || '');
+  return encryptedArray.join('');
+}
