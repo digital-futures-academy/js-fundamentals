@@ -1,1 +1,1 @@
-let greet = (name) => `Hi, ${name}!`;
+const greet = (name) => `Hi, ${name}!`;
