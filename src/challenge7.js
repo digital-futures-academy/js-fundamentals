@@ -66,7 +66,6 @@ function insertIntoClass(letterNumber, text) {
 
     // Assuming the first row contains headers
     const headers = rows[0].split(', ');
-    const data = [];
 
     // For each row, take the first word to use as a 'key' and the second one to use as a value
     for (let i = 1; i < rows.length; i++) {
