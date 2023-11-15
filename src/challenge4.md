@@ -1,0 +1,2 @@
+- First Class Functions are functions that can be assigned to variables meaning you can store a function in a variable. They can also be sent as a parameter to another function and they can be the result of another function
+- declaring a function is essentially giving the function instruction to execute, whereas calling a function is when you actually execute the instructions in the body of the function
