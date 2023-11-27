@@ -7,14 +7,11 @@ In a markdown or text file called `challenge4.md` or `challenge4.txt`, write an 
 
 Q1 & 2. In JavaScript, functions are treated as 'First Class citizens' - They can be stored in variables, passed to other functions as arguments, and be returned from other functions as values.
 
-Q3. A function declaration defines a function that will be executed when it is invoked (called). Before ES6, the syntax looked like this:
+Q3. A Function declaration creates a Function object. It is made up of the Function keyword followed by
+a function name. The syntax looks like this:
 
     <!-- function myFunction() {} -->
 
-In ES6, arrow functions are now used and the function is commonly stored in a variable:
-
-const myFunction = () => {}
-
-Calling a function means executing a function that has already been defined, which is usually done like this:
+Calling a function means executing a function that has already been declared, which is usually done like this:
 
     <!-- myFunction(); -->

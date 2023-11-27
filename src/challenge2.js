@@ -3,3 +3,5 @@
 function greet(name) {
     return `hi ${name}`;
 }
+
+console.log("Andy"); // Andy

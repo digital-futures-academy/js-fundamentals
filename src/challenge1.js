@@ -5,4 +5,4 @@ function greet() {
     return 'Hi, Ed!';
 }
 
-console.log(greet());
+console.log(greet()); // Hi, Ed!

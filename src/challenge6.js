@@ -116,3 +116,5 @@ const encryptString = myString => {
     output = output.replace(/undefined/g, "1")
     return output;
   }
+
+console.log(encryptString("Hi Ed!")); // 3510132554
