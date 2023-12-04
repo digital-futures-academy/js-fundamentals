@@ -37,5 +37,3 @@ return encryptMe(str)
 }
 module.exports={challengeMe}
 
-// encryptMe("Hi, Ed!")
-// .then(result=>console.log(result))
