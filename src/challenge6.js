@@ -2,11 +2,11 @@ const fs = require("fs").promises;
 const challengeMe=(str)=>{
 
 const buildLookup = () => {
-    console.log(__dirname)
+
   return fs.readFile(`${__dirname}/data/csvData.csv`, "UTF-8")
   .then((data) => {
     const array=data.split("\n")
-    // console.log(array)
+  
     const lookup = {};
     for (let i = 1; i < array.length; i++) {
         if (array[i][0]===","){
@@ -37,5 +37,3 @@ return encryptMe(str)
 }
 module.exports={challengeMe}
 
-// encryptMe("Hi, Ed!")
-// .then(result=>console.log(result))
