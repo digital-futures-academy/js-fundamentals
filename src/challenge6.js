@@ -1,8 +1,9 @@
 const fs = require("fs").promises;
+
 const challengeMe=(str)=>{
 
 const buildLookup = () => {
-
+    
   return fs.readFile(`${__dirname}/data/csvData.csv`, "UTF-8")
   .then((data) => {
     const array=data.split("\n")
