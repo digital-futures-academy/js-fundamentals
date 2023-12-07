@@ -110,6 +110,7 @@ class LetterNumber {
 
 class LetterLetter {
   encryptAsync(string) {
+  
       return buildLookup("letter").then((lookup) => {
       
         let encrypted = "";

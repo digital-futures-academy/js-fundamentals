@@ -13,6 +13,9 @@
   },
   "author": "dearshrewdwit",
   "license": "ISC",
+  "bin":{
+    "cipher":"index.js"
+  },
   "bugs": {
     "url": "https://github.com/digital-futures-academy/js-fundamentals/issues"
   },
