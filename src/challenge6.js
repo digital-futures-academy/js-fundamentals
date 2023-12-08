@@ -1,3 +1,4 @@
+//challenge6
 class StringEncryptor {
     constructor() {
         // Define the substitution table
