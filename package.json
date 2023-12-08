@@ -2,7 +2,7 @@
   "name": "js-fundamentals",
   "version": "1.0.0",
   "description": "Training js Fundamentals",
-  "main": "index.js",
+  "main": "cipher.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "jest": "jest"
@@ -14,7 +14,7 @@
   "author": "dearshrewdwit",
   "license": "ISC",
   "bin":{
-    "cipher":"index.js"
+    "cipher":"cipher.js"
   },
   "bugs": {
     "url": "https://github.com/digital-futures-academy/js-fundamentals/issues"
