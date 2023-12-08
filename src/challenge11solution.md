@@ -12,7 +12,7 @@ npm link
 
 new cli usage -
 ``````
-cipher <path/to/dictionary> <inputfile[.txt.ext]> <key[number]>
+cipher <path/to/dictionary> <inputfile[.txt.enc]> <key[number]>
 
 e.g cipher charChar.txt example.txt 50
 
@@ -20,6 +20,8 @@ will encode example.txt outputting example.txt.enc using the dictionary from cha
 
 ``````
 - The program will auto-detect if the given dictionary substitutes all numeric or alphanumeric
+
+- Program will encode or decode depending on the fileName extension (.txt 2nd argument will encode, .txt.enc 2nd argument will decode)
 
 -  A dictionary must consist of exactly 97 character substitutions
 
@@ -33,4 +35,4 @@ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*()-_=+[]{};:'"\|,.<
 
 - all substitutions must be unique
 
-example encoding .txt files are included /src/data/charChar.txt and /src/data/charNum.txt
+example encoding .txt files are included ``````/src/data/charChar.txt`````` and ``````/src/data/charNum.txt``````
