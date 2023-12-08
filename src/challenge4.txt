@@ -1,0 +1,65 @@
+First-Class Functions:
+In programming languages, the concept of first-class functions refers to the ability of functions to be treated as first-class citizens. This means that functions can be:
+
+1. Assigned to variables: You can assign a function to a variable.
+
+2. Passed as arguments to other functions: You can pass a function as an argument to another function.
+
+3. Returned from other functions: A function can be returned as a value from another function.
+
+4. Stored in data structures: Functions can be stored in data structures like arrays or objects.
+
+In JavaScript:
+JavaScript treats functions as first-class citizens, which means you can do all of the above with functions.
+
+Examples:
+1. Assigned to variables:
+   const sayHello = function() {
+     console.log("Hello!");
+   };
+
+2. Passed as arguments to other functions:**
+   function greet(greetingFunction) {
+     greetingFunction();
+   }
+
+   greet(function() {
+     console.log("Hola!");
+   });
+
+3. Returned from other functions:
+   function getGreetingFunction() {
+     return function() {
+       console.log("Bonjour!");
+     };
+   }
+
+   const bonjourFunction = getGreetingFunction();
+   bonjourFunction();
+
+
+4. Stored in data structures:
+   const functionArray = [
+     function() {
+       console.log("Good morning!");
+     },
+     function() {
+       console.log("Good afternoon!");
+     }
+   ];
+
+   functionArray[0]();
+
+Difference between Declaring and Calling a Function:
+
+- Declaring a function: This involves defining the function and its behavior. It's the process of creating a function and specifying what it does.
+
+  function greet(name) {
+    console.log(`Hi, ${name}!`);
+  }
+
+- Calling a function: This involves executing the function with specific arguments. It's the process of invoking the function to perform its defined task.
+
+  greet("Alice");
+
+  In this example, declaring the function happens with the `function greet(name) { ... }` syntax, and calling the function occurs with `greet("Alice")`.
