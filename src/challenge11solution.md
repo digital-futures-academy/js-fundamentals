@@ -1,5 +1,8 @@
 ### ReadMe
 
+
+package succesfully created at https://www.npmjs.com/package/silly-cipher
+
 Exercise 9 refactored with altered usage
 
 - current package link is cipher.js
