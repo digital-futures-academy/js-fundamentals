@@ -1,8 +1,8 @@
 {
-  "name": "js-fundamentals",
-  "version": "1.0.0",
+  "name": "js-fundamentals-dan",
+  "version": "1.0.1",
   "description": "Training js Fundamentals",
-  "main": "index.js",
+  "main": "challenge11.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/digital-futures-academy/js-fundamentals.git"
   },
-  "author": "dearshrewdwit",
+  "author": "Dan Williams",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/digital-futures-academy/js-fundamentals/issues"
   },
   "homepage": "https://github.com/digital-futures-academy/js-fundamentals#readme",
   "bin": {
-    "cypher": "./src/challenge10.js"
+    "cypher": "./src/challenge11.js"
   },
   "dependencies": {
     "yargs": "^17.7.2"

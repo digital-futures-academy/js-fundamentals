@@ -543,6 +543,10 @@ let charset;
 let characterSet = {};
 let encryptionKey;
 
-checkCommandLineAndconfigure(process.argv);
 
-processFile(ciphertype, method, inputFileName, encryptionKey);
+function handleArgsAndProcess() {
+    checkCommandLineAndconfigure(process.argv);
+    processFile(ciphertype, method, inputFileName, encryptionKey);
+}
+
+exports.cypher = handleArgsAndProcess;
