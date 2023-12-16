@@ -1,5 +1,7 @@
 # JS Fun-damentals
 
+## Note: published to NPM as js-fundamentals-dan
+
 ## Quickstart
 
 1. **Fork** this repository (important)
