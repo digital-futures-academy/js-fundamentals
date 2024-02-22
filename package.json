@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/digital-futures-academy/js-fundamentals/issues"
   },
-  "homepage": "https://github.com/digital-futures-academy/js-fundamentals#readme"
+  "homepage": "https://github.com/digital-futures-academy/js-fundamentals#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
 }
