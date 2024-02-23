@@ -1,19 +1,39 @@
-// const csv = require('csv-parser')
-// const fs = require('fs')
-// const results = [];
+/*
+#### Requirements
 
-// fs.createReadStream('characterset2.csv')
-//   .pipe(csv())
-//   .on('data', (data) => results.push(data))
-//   .on('end', () => {
-//     console.log(results);
-//     // [
-//     //   { NAME: 'Daffy Duck', AGE: '24' },
-//     //   { NAME: 'Bugs Bunny', AGE: '22' }
-//     // ]
-//   });
+We have a new requirement! We need to build a letter-letter substitution cipher quickly so we can decrypt the next message that pops into our pocket mysteriously!
 
-let encryptionTableArray = [
+- NB: Use [characterSet1](https://gist.github.com/dearshrewdwit/691c71616995ad2430ab309aa9998745) for the Letter Number cipher and [characterSet2](https://gist.github.com/dearshrewdwit/5c4f0460066c16d14e512576a446403a) for the Letter Letter cipher
+- NB: Ciphers should assume a valid character set
+- NB: Create more test cases to help you develop your program and cover different code paths.
+
+### Acceptance Criteria
+```js
+let plaintext = 'Look over there!'
+let key = 31045
+
+// Letter Number test cases
+console.log(letterNumberCipher.encrypt(plaintext, key)) // "84616157466168516446665451645199"
+console.log(letterNumberCipher.decrypt("84616157466168516446665451645199", key)) // 'Look over there!'
+
+// Letter Letter test cases
+console.log(letterLetterCipher.encrypt(plaintext)) // "B!!ym!9DAm2§DAD "
+console.log(letterLetterCipher.decrypt("B!!ym!9DAm2§DAD ")) // 'Look over there!'
+
+// another way to test your program
+console.log(plaintext === letterNumberCipher.decrypt(letterNumberCipher.encrypt(plaintext, key), key))
+console.log(plaintext === letterLetterCipher.decrypt(letterLetterCipher.encrypt(plaintext)))
+```
+
+### Mysterious Message in Pocket
+
+> ~JtMy m&DmwDD*mXm*tu2AXM2t!w mewMDm[!JmADX*m2§tum.DuuX£D$m3tw*m2§DmM!..Jwt2[mM§XwwD7mwX.D*mNAXw*!.Nm!wmGtuM!A*$mXw*mu§XADmXmAXw*!.m3XM2mAD£XA*tw£mXw[mtwuDM2m?mpJ2mt2m§Xum2!mpDmXp!J2mtwuDM2u m^tw£DAumMA!uuD*m2§tum_t77m*tu2AXM2mXw*mu7!_m*!_wm2§Dm%D!%7DmMAXMytw£m2§DuDmMt%§DAu 
+
+decrypted text from above!!
+K!Quick! We need a distraction! Once you read this message, find the community channel named "random" on Discord, and share a random fact regarding any insect - but it has to be about insects! Fingers crossed this will distract and slow down the people cracking these ciphers!  
+*/
+
+const letterLetterEncryptionTableArray = [
     { character: ' ', 'value': 'm' },
     { character: 'a', 'value': 'X' },
     { character: 'b', 'value': 'p' },
@@ -113,3 +133,136 @@ let encryptionTableArray = [
     { character: '0', 'value': 'T' }
 ]
 
+class LetterLetterCipher {
+    encrypt(strParameter) {               
+        let encryptedText = "";
+        for (let str of strParameter) {
+          let foundStr = letterLetterEncryptionTableArray.find(item => item.character == str);
+          encryptedText += foundStr.value;
+        }
+        return encryptedText;
+      }
+  
+      decrypt(strParameter) {
+          let plainText = "";
+          for (let str of strParameter) {
+            let foundCipherChar = letterLetterEncryptionTableArray.find(item => item.value == str);
+            plainText += foundCipherChar.character;
+          }
+          return plainText;
+        }
+}
+
+
+class LetterNumberCipher {
+
+    encrypt(strParameter, offsetNum) {
+      this.createEncryptionTable(offsetNum);
+      
+      let encryptedText = "";
+      for (let i = 0; i < strParameter.length; i++) {
+        let indOfKey = this.keysInEncryptionTable.indexOf(strParameter[i]);
+        encryptedText += this.valuesInEncryptionTable[indOfKey];
+      }
+      return encryptedText;
+    }
+
+    decrypt(strParameter, offsetNum) {
+        this.createEncryptionTable(offsetNum);        
+        
+        let plainText = "";
+        for (let i = 0; i < strParameter.length-1; i+=2) {
+          let indOfValue = this.valuesInEncryptionTable.indexOf(strParameter[i]+strParameter[i+1]);
+          plainText += this.keysInEncryptionTable[indOfValue];
+        }
+        return plainText;
+      }
+  
+    updateCounterAndEncryptionList(item){
+      this.keysInEncryptionTable.push(item);
+      this.valuesInEncryptionTable.push(this.count < 10 ? `0${this.count}` : `${this.count}`)
+      this.count++;
+      this.count = this.count >= 100 ? 0 : this.count;
+    }
+  
+    createEncryptionTable(num){
+        this.keysInEncryptionTable = [];
+        this.valuesInEncryptionTable = [];
+        this.count = num < 99 ? 1 + num : 1 + num % 100;
+  
+      for (let item of " abcdefghijklmnopqrstuvwxyz") {
+          this.updateCounterAndEncryptionList(item);
+      }
+  
+      for (let item of "abcdefghijklmnopqrstuvwxyz".toUpperCase()) {
+          this.updateCounterAndEncryptionList(item);
+      }
+  
+      const specialChar = [
+        "!",
+        "@",
+        "£",
+        "$",
+        "%",
+        "^",
+        "&",
+        "*",
+        "(",
+        ")",
+        "-",
+        "_",
+        "=",
+        "+",
+        "[",
+        "]",
+        "{",
+        "}",
+        ";",
+        ":",
+        "'",
+        '"',
+        "\\",
+        "|",
+        ",",
+        ".",
+        "<",
+        ">",
+        "/",
+        "?",
+        "`",
+        "~",
+        "§",
+        "±",
+      ];
+  
+      for (let item of specialChar) {
+          this.updateCounterAndEncryptionList(item);
+      }
+  
+      for (let item of "1234567890") {
+          this.updateCounterAndEncryptionList(item);
+      }
+      this.count = 1
+    }
+  }
+
+/*
+let letterNumberCipher = new LetterNumberCipher();
+let letterLetterCipher = new LetterLetterCipher();
+/// Acceptance Criteria
+let plaintext = 'Look over there!'
+let key = 31045
+
+// Letter Number test cases
+console.log(letterNumberCipher.encrypt(plaintext, key)); // "84616157466168516446665451645199"
+console.log(letterNumberCipher.decrypt("84616157466168516446665451645199", key)); // 'Look over there!'
+
+// Letter Letter test cases
+console.log(letterLetterCipher.encrypt(plaintext)); // "B!!ym!9DAm2§DAD "
+console.log(letterLetterCipher.decrypt("B!!ym!9DAm2§DAD ")); // 'Look over there!'
+
+// another way to test your program
+console.log(plaintext === letterNumberCipher.decrypt(letterNumberCipher.encrypt(plaintext, key), key));
+console.log(plaintext === letterLetterCipher.decrypt(letterLetterCipher.encrypt(plaintext)));
+console.log("All Tests have been run and passed"); 
+*/
