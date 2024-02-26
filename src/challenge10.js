@@ -32,7 +32,7 @@ class LetterLetterCipher {
       let foundStr = letterLetterEncryptionTableArray.find(
         (item) => item.character == str
       );
-      encryptedText += foundStr.value;
+      if (foundStr) encryptedText += foundStr.value;
     }
     return encryptedText;
   }
