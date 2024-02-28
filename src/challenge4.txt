@@ -1,0 +1,15 @@
+1) a first class function is when a function can be treated as if it was a variable. this function can be assinged to any other variable. essentially the function can be treated the same way data types can.
+2) this concept is good for javascript as it allows cleaner code as functions can be assigned to variables which can be used throughout the code. it enables functions to be reused which means there is less clutter. it also allows functions assined to a variable to be passed as an argument to another function.
+3) delcaring a function means you are writing the backbones of the function and its purpose (like a blueprint). calling a function means you are executing the blueprint to have a desired effect.
+4) for instance, lets take the example of the previous challenge:
+function greet(name) {
+    return "Hi, " + name
+}
+
+you can assign a variable to this function:
+
+let outcome = greet
+
+which then allows you to call this variable in other parts of your code:
+
+console.log(outcome("john"));
