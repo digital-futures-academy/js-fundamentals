@@ -1,13 +1,18 @@
-// Using the function keyword declare a function called `greet`
-// that returns a String "Hi, Ed!"
-function greet() {
-  return "Hi, Ed!";
-}
+/*
+#### Requirements
+Same as Challenge 2 - this time use an arrow function
+*/
+
+const greet = (name) => `Hi, ${name}!`;
 
 const tests = [
   {
+    args: ["Ben"],
+    expected: "Hi, Ben!",
+  },
+  {
     args: [],
-    expected: "Hi, Ed!",
+    expected: "Hi, undefined!",
   },
 ];
 
