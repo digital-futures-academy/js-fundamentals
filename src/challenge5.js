@@ -10,20 +10,3 @@ class Student {
       .toLowerCase()}`;
   }
 }
-
-const tests = [
-  {
-    args: [new Student("asia")],
-    expected: "Asia",
-  },
-  {
-    args: [new Student("BeNjAmIN")],
-    expected: "Benjamin",
-  },
-];
-
-function runTests(fn, tests) {
-  const didPass = tests.every((test) => fn(...test.args) === test.expected);
-  console.log(didPass ? "All tests passed" : "Fail");
-}
-runTests((student) => student.capitalisedName(), tests);

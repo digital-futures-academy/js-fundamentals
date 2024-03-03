@@ -1,78 +1,64 @@
-import letterLetterMap from "./utils/letterLetterMap.mjs";
-import letterNumberMap from "./utils/letterNumberMap.mjs";
+import {
+  characterSetPaths,
+  getCharacterSet,
+} from "./utils/getCharacterSet.mjs";
+import Cypher from "./utils/Cypher.mjs";
 
-class Cypher {
-  constructor(charMap, options) {
-    this._charValueMap = charMap;
-    this._valueCharMap = {};
-    for (const [char, value] of Object.entries(charMap)) {
-      this._valueCharMap[value] = char;
-    }
-    this._padToLength = options?.padding?.paddToLength;
-    this._paddingChar = options?.padding?.paddingChar || "?";
-  }
+//Get character Sets
+const letterNumberCharacterSet = await getCharacterSet(
+  characterSetPaths.letterNumber
+);
+const letterLetterCharacterSet = await getCharacterSet(
+  characterSetPaths.letterLetter
+);
 
-  encrypt(str, key) {
-    let encryptedText = "";
-    for (let i = 0; i < str.length; i++) {
-      const char = str[i];
-      if (!this._charValueMap.hasOwnProperty(char)) continue;
+//Initialise Cyphers
+const letterNumberCypher = new Cypher(letterNumberCharacterSet, {
+  padding: { length: 2, character: "0" },
+});
+const letterLetterCipher = new Cypher(letterLetterCharacterSet);
 
-      //get current char
-      let encryptedChar = this._charValueMap[char];
-      //Apply key where applicable
-      if (key !== undefined) encryptedChar = `${(+encryptedChar + key) % 100}`;
-      //Apply padding where applicable
-      if (this._padToLength)
-        encryptedChar = encryptedChar.padStart(
-          this._padToLength,
-          this._paddingChar
-        );
-      //Add encrypted char to return string
-      encryptedText += encryptedChar;
-    }
-    return encryptedText;
-  }
-
-  decrypt(str, key) {
-    let plainText = "";
-
-    for (let i = 0; i < str.length; i += this._padToLength ?? 1) {
-      //get current char/chars
-      let encryptedChar = str.slice(i, i + (this._padToLength || 1));
-      //Apply key where applicable
-      if (key) encryptedChar = (((encryptedChar - key) % 100) + 100) % 100;
-
-      if (!this._valueCharMap.hasOwnProperty(encryptedChar)) continue;
-
-      const decryptedChar = this._valueCharMap[encryptedChar];
-      plainText += decryptedChar;
-    }
-
-    return plainText;
-  }
-}
-
+//Run Tests
 let plaintext = "Look over there!";
-let mysteriousText = `~JtMy m&DmwDD*mXm*tu2AXM2t!w mewMDm[!JmADX*m2§tum.DuuX£D$m3tw*m2§DmM!..Jwt2[mM§XwwD7mwX.D*mNAXw*!.Nm!wmGtuM!A*$mXw*mu§XADmXmAXw*!.m3XM2mAD£XA*tw£mXw[mtwuDM2m?mpJ2mt2m§Xum2!mpDmXp!J2mtwuDM2u m^tw£DAumMA!uuD*m2§tum_t77m*tu2AXM2mXw*mu7!\_m*!\_wm2§Dm%D!%7DmMAXMytw£m2§DuDmMt%§DAu`;
 let key = 31045;
 
-const letterLetterCipher = new Cypher(letterLetterMap);
-const letterNumberCipher = new Cypher(letterNumberMap, {
-  padding: { paddToLength: 2, paddingChar: "0" },
+const tests = [
+  {
+    cypher: letterNumberCypher,
+    plaintext,
+    encryptedText: "84616157466168516446665451645199",
+    key,
+  },
+  {
+    cypher: letterLetterCipher,
+    plaintext,
+    encryptedText: "B!!ym!9DAm2§DAD ",
+  },
+  {
+    cypher: letterLetterCipher,
+    plaintext: `Quick! We need a distraction! Once you read this message, find the community channel named "random" on Discord, and share a random fact regarding any insect - but it has to be about insects! Fingers crossed this will distract and slow down the people cracking these ciphers`,
+    encryptedText:
+      "~JtMy m&DmwDD*mXm*tu2AXM2t!w mewMDm[!JmADX*m2§tum.DuuX£D$m3tw*m2§DmM!..Jwt2[mM§XwwD7mwX.D*mNAXw*!.Nm!wmGtuM!A*$mXw*mu§XADmXmAXw*!.m3XM2mAD£XA*tw£mXw[mtwuDM2m?mpJ2mt2m§Xum2!mpDmXp!J2mtwuDM2u m^tw£DAumMA!uuD*m2§tum_t77m*tu2AXM2mXw*mu7!_m*!_wm2§Dm%D!%7DmMAXMytw£m2§DuDmMt%§DAu",
+  },
+];
+
+tests.forEach((test, i) => {
+  //Encryption Test
+  const encryptedResult = test.cypher.encrypt(test.plaintext, test.key);
+  console.log(
+    `${i}a: ${test.plaintext}->${encryptedResult} ${
+      encryptedResult === test.encryptedText
+        ? "Pass"
+        : `Fail (expected: ${test.encryptedText})`
+    }`
+  );
+  //Decryption Test
+  const plainTextResult = test.cypher.decrypt(test.encryptedText, test.key);
+  console.log(
+    `${i}b: ${test.encryptedText}->${plainTextResult} ${
+      plainTextResult === test.plaintext
+        ? "Pass"
+        : `Fail (expected: ${test.plaintext})`
+    }`
+  );
 });
-
-console.log(letterLetterCipher.decrypt(mysteriousText)); //Quick! We need a distraction! Once you read this message, find the community channel named "random" on Discord, and share a random fact regarding any insect - but it has to be about insects! Fingers crossed this will distract and slow down the people cracking these ciphers
-
-console.log(
-  plaintext ===
-    letterNumberCipher.decrypt(letterNumberCipher.encrypt(plaintext, key), key)
-    ? "Pass"
-    : "Fail"
-);
-console.log(
-  plaintext ===
-    letterLetterCipher.decrypt(letterLetterCipher.encrypt(plaintext))
-    ? "Pass"
-    : "Fail"
-);

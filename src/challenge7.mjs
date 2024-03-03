@@ -1,42 +1,34 @@
-import letterNumberMap from "./utils/letterNumberMap.mjs";
+import {
+  characterSetPaths,
+  getCharacterSet,
+} from "./utils/getCharacterSet.mjs";
+import Cypher from "./utils/Cypher.mjs";
 
-class LetterNumber {
-  constructor(charMap) {
-    this._charMap = charMap;
-  }
+//Get character Set
+const letterNumberCharacterSet = await getCharacterSet(
+  characterSetPaths.letterNumber
+);
 
-  encrypt(str, offSet) {
-    return str
-      .split("")
-      .map((char) => {
-        if (!this._charMap.hasOwnProperty(char)) return "";
-        return `${(this._charMap[char] + offSet) % 100}`.padStart(2, "0");
-      })
-      .join("");
-  }
-}
+//Initialise Cypher
+const letterNumberCypher = new Cypher(letterNumberCharacterSet, {
+  padding: { length: 2, character: "0" },
+});
+
+//Run Tests
 
 const tests = [
-  {
-    args: ["a", 1],
-    expected: "03",
-  },
-  {
-    args: ["Ed", 4],
-    expected: "3609",
-  },
-  {
-    args: ["Hi, Ed!", 302],
-    expected: "37128003340756",
-  },
+  { plainText: "a", key: 1 },
+  { plainText: "Ed", key: 4 },
+  { plainText: "Hi, Ed!", key: 302 },
 ];
+const expectedResults = ["03", "3609", "37128003340756"];
 
-function runTests(fn, tests) {
-  const didPass = tests.every((test) => fn(...test.args) === test.expected);
-  console.log(didPass ? "All tests passed" : "Fail");
-}
-
-runTests(
-  (str, key) => new LetterNumber(letterNumberMap).encrypt(str, key),
-  tests
-);
+tests.forEach((test, i) => {
+  const expectedResult = expectedResults[i];
+  const result = letterNumberCypher.encrypt(test.plainText, test.key);
+  console.log(
+    `${i + 1}: ${test.plainText} -> ${result} ${
+      result === expectedResult ? "Pass" : `Fail (expected: ${expectedResult})`
+    }`
+  );
+});
