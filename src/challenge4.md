@@ -5,6 +5,7 @@ In a markdown or text file called `challenge4.md` or `challenge4.txt`, write an 
 - what the difference is between declaring a function and calling it
 - Bonus: give examples for each explanation
 
+### My Response:
 
 ## 'First Class' functions are a way to write block of re-usable code which can be used to produce desired results or actions under pre-set or no inputs. it is a way to keep our code clean and DRY. with aim to make developers and testers life easier by making our code readable. for example (a python function to take a user name and greet them):
 
