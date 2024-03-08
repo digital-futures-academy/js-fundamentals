@@ -2,7 +2,7 @@
 // that returns a String "Hi, Ed!"
 
 function greet(name) {
-  return `Hi, ${name}!`;
+  return 'Hi, Ed!';
 }
 
-console.log(greet('Ed'));
+console.log(greet());
