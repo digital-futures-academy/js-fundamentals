@@ -3,7 +3,7 @@
 // The function should iterate through a string and create a new string with the corresponding number on the encryption table
 // Run the function to test it
 
-const encryptionTable = {
+export const encryptionTable = {
   ' ': '1',
   a: '2',
   b: '3',
