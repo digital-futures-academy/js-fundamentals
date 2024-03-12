@@ -1,9 +1,12 @@
 {
-  "name": "js-fundamentals",
+  "name": "ciphery-mickeymarse-js_challenges-digital_futures",
   "version": "1.0.0",
   "description": "Training js Fundamentals",
-  "main": "index.js",
+  "main": "src/challenge11.js",
   "type": "module",
+  "bin": {
+    "cipher": "src/challenge11.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,23 +1,32 @@
-# JS Fun-damentals
+# Cipher
 
-## Quickstart
+Initialize a Node.js project
 
-1. **Fork** this repository (important)
-2. **Clone** it to your machine
-
-```sh
-$ git clone git@github.com:digital-futures-academy/js-fundamentals.git
-$ cd js-fundamentals
+```javascript
+npm init -y
 ```
-3. Complete the first challenge!
-4. For each successive challenge, add files in the `src` directory.
-5. **Stage** your changes `git add <path to file>`
-6. **commit** your changes `git commit -m <commit message>`
-7. Then **push** your changes to your forked repository `git push origin main`
-8. [Open a PR](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) back to this repository
 
-NB: Only open 1 Pull Request. Give your PR a title that is your first name and last name. Your PR will automatically update as you push more work to your repository - so you should only ever need to have 1 PR for all the work you do for these exercises.
+Install the cipher package
 
-Then repeat steps 4-6 for each challenge!
+```javascript
+npm i ciphery-mickeymarse-js_challenges-digital_futures
+```
 
-The directory `challenges` holds files challenges 1-11, named accordingly. The directory `src` is currently mostly empty - this is where you should add files with the implementation of each challenge. Sometimes you might need to copy paste your previous challenge so you can extend it. Therefore there should be a `src` file for every challenge file. Eg: `challenges/challenge3.md` and `src/challenge3.js`.
+In your `index.js` file:
+
+```javascript
+import cipher from 'ciphery-mickeymarse-js_challenges-digital_futures';
+cipher();
+```
+
+Run the `cipher` command followed by the appropriate flags:
+`ll` - LetterLetterCipher
+`ln` - LetterNumberCipher
+`enc` - encryption
+`dec` - decryption
+`example.txt`/`example.txt.enc` - file to encrypt/decrypt
+`key`(number) - number you want to pass for the `ln` encryption/decryption
+
+###### Lost the error handling during a refactoring and currently too tired and too close to the application deadline to implement it.
+
+###### Hopefully, I will be able to do it after handing in my application.
