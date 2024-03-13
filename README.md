@@ -20,13 +20,11 @@ cipher();
 ```
 
 Run the `cipher` command followed by the appropriate flags:
-`ll` - LetterLetterCipher
-`ln` - LetterNumberCipher
-`enc` - encryption
-`dec` - decryption
-`example.txt`/`example.txt.enc` - file to encrypt/decrypt
-`key`(number) - number you want to pass for the `ln` encryption/decryption
 
-###### Lost the error handling during a refactoring and currently too tired and too close to the application deadline to implement it.
-
-###### Hopefully, I will be able to do it after handing in my application.
+- `-e, --encrypt` - Encrypt file
+- `-d, --decrypt` - Decrypt file  
+  They can only accept as methods:
+  - `ll` - LetterLetterCipher
+  - `ln` - LetterNumberCipher
+- `-f, --file` - Path to file you want to encrypt. If you need to decrypt, make sure it has the `.enc` extension.
+- `-k, --key` - Number you want to pass for the `ln` encryption/decryption

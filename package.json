@@ -1,6 +1,6 @@
 {
   "name": "ciphery-mickeymarse-js_challenges-digital_futures",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Training js Fundamentals",
   "main": "src/challenge11.js",
   "type": "module",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/digital-futures-academy/js-fundamentals/issues"
   },
-  "homepage": "https://github.com/digital-futures-academy/js-fundamentals#readme"
+  "homepage": "https://github.com/digital-futures-academy/js-fundamentals#readme",
+  "dependencies": {
+    "commander": "^12.0.0"
+  }
 }
