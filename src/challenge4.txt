@@ -1,0 +1,32 @@
+1. First-class functions are a concept in computer science and programming languages 
+where functions are treated as first-class citizens. 
+This means they can be:
+    Passed as arguments to other functions.
+    Returned as values from other functions.
+    Assigned to variables.
+    Stored in data structures.
+
+
+
+2. In JavaScript, functions are first-class citizens, which means they can be treated just like any other data type.
+    In JavaScript, functions can be assigned to variables just like any other value.
+    In JavaScript, you can pass functions as arguments to other functions. This allows for the creation of higher-order functions.
+    In JavaScript, functions can also return other functions. This is another aspect of higher-order functions. 
+    In JavaScript, functions can be stored in arrays, objects, or any other data structure.
+
+
+3. Declaring a function: This is the process of defining a function. 
+When you declare a function, you specify its name, parameters (if any), 
+and the code that will be executed when the function is called.
+    ex. function greet(name) {
+            console.log(`Hello, ${name}!`);
+        }
+
+Calling a function: This is the process of invoking or executing a function. 
+When you call a function, you use its name followed by parentheses () 
+and provide any required arguments inside the parentheses. 
+Calling a function executes the code defined within its body.
+    ex. greet('Pedro')
+
+
+
