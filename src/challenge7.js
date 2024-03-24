@@ -1,20 +1,18 @@
 class LetterNumber {
-    constructor(str, n) {
-        this.str = str;
-        this.n = n;
-    }
     twoDigit(number) {
-        let modulo = number % 100;
+        const modulo = number % 100;
         return modulo.toString().padStart(2, '0');
     }
-    encrypt() {
+    encrypt(str, n) {
         const characters = ` abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@£$%^&*()-_=+[]{};:\'"\\|,.<>/?\`~§±1234567890`;
-        let encryptedStr = "";
-        for (let i = 0; i < this.str.length; ++i) {
-            encryptedStr += this.twoDigit(characters.indexOf(this.str[i]) + 1 + this.n);
+        let encryptedStr = '';
+        for (let i = 0; i < str.length; ++i) {
+            encryptedStr += this.twoDigit(characters.indexOf(str[i]) + 1 + n);
         }
         return encryptedStr;
     };
 };
-let letterNumber = new LetterNumber("Hi, Ed!", 302);
-console.log(letterNumber.encrypt()); //prints 37128003340756
+const letterNumber = new LetterNumber();
+console.log(letterNumber.encrypt("a", 1)); //prints 03
+console.log(letterNumber.encrypt("Ed", 4)); //prints 3609
+console.log(letterNumber.encrypt("Hi, Ed!", 302)); //prints 37128003340756
