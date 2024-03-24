@@ -11,26 +11,20 @@ class LetterNumber {
         }
         return encryptedStr;
     }
+    splitStringIntoPairs(inputString) {
+        return inputString.toString().match(/.{1,2}/g);
+    }
     decrypt(encryption, key) {
-        function splitStringWithoutRepeating(inputString) {
-            const usedChars = new Set();
-            const outputArray = [];
-            for (let i = 0; i < inputString.length - 1; i += 2) {
-                const currentPair = inputString.slice(i, i + 2);
-                if (!usedChars.has(currentPair)) {
-                    outputArray.push(currentPair);
-                    usedChars.add(currentPair);
-                }
-            }
-            return outputArray;
-        }
+        const modulo = key % 100;
+        const byTwos = this.splitStringIntoPairs(encryption);
         let decryption = '';
         for (let i = 0; i < byTwos.length; ++i) {
-            decryption += this.characters[byTwos[i]];
+            decryption += this.characters[Math.abs(byTwos[i] - modulo) - 1];
         }
         return decryption;
     }
 };
 const letterNumber = new LetterNumber();
 console.log(letterNumber.encrypt("Hi, Ed!", 0));
-console.log(letterNumber.decrypt(35107801320554, 0))
+console.log(letterNumber.splitStringIntoPairs('0681497203762572077292808186837291878577878677459172878672928772928081917275818880779025'))
+console.log(letterNumber.decrypt('0681497203762572077292808186837291878577878677459172878672928772928081917275818880779025', 4771));
